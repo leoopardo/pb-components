@@ -1,0 +1,14 @@
+{
+  "tokenSetOrder": [
+    "global/primitive",
+    "global/semantic",
+    "brand/typography",
+    "brand/color/config",
+    "brand/color/scheme",
+    "brand/color/theme/light",
+    "brand/color/theme/dark",
+    "components/button",
+    "components/tag",
+    "components/big-number"
+  ]
+}
