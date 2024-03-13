@@ -1,0 +1,58 @@
+{
+  "scheme": {
+    "primary": {
+      "value": "#182845",
+      "type": "color"
+    },
+    "secondary": {
+      "value": "#35B6B4",
+      "type": "color"
+    },
+    "neutral": {
+      "value": "#808ba8",
+      "type": "color"
+    },
+    "success": {
+      "value": "#3B9B76",
+      "type": "color"
+    },
+    "danger": {
+      "value": "#D14343",
+      "type": "color"
+    },
+    "warning": {
+      "value": "#FFB020",
+      "type": "color"
+    },
+    "data": {
+      "1": {
+        "value": "#386cb0",
+        "type": "color"
+      },
+      "2": {
+        "value": "#00BCF2",
+        "type": "color"
+      },
+      "3": {
+        "value": "#1b9e77",
+        "type": "color"
+      },
+      "4": {
+        "value": "#f0d631",
+        "type": "color"
+      },
+      "5": {
+        "value": "#d86d1c",
+        "type": "color"
+      },
+      "6": {
+        "value": "#b92fc2",
+        "type": "color"
+      },
+      "7": {
+        "value": "#66a61e",
+        "type": "color"
+      }
+    }
+  }
+}
