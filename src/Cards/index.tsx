@@ -1,6 +1,6 @@
 import React, { FC, HTMLAttributes, ReactChild } from 'react';
 import { useTheme } from '../ThemeProvider';
-import './styles.sass';
+import './styles.css';
 
 export interface Props extends HTMLAttributes<HTMLDivElement> {
   children?: ReactChild;
