@@ -1,0 +1,82 @@
+{
+  "version": "0.1.2",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "storybook dev",
+    "build-storybook": "storybook build",
+    "deploy": "npm version patch && npm publish"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "pb-components",
+  "author": "Leonardo Araujo",
+  "module": "dist/pb-components.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/pb-components.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/pb-components.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@chromatic-com/storybook": "1.2.18",
+    "@size-limit/preset-small-lib": "^11.0.3",
+    "@storybook/addon-essentials": "^8.0.0",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-interactions": "^8.0.0",
+    "@storybook/addon-links": "^8.0.0",
+    "@storybook/addon-onboarding": "^8.0.0",
+    "@storybook/addons": "^7.6.17",
+    "@storybook/blocks": "^8.0.0",
+    "@storybook/cli": "^8.0.0",
+    "@storybook/react": "^8.0.0",
+    "@storybook/react-vite": "^8.0.0",
+    "@storybook/test": "^8.0.0",
+    "@types/react": "^18.2.65",
+    "@types/react-dom": "^18.2.22",
+    "babel-loader": "^9.1.3",
+    "husky": "^9.0.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "sass": "^1.71.1",
+    "size-limit": "^11.0.3",
+    "storybook": "^8.0.0",
+    "style-dictionary": "^3.9.2",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.2"
+  }
+}
