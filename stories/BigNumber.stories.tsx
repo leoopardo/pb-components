@@ -18,7 +18,7 @@ const meta: Meta = {
   },
   decorators: [
     Story => (
-      <ThemeProvider theme={{ primaryColor: 'red' }}>
+      <ThemeProvider theme={{type: "light"}}>
         <div style={{ height: 150, width: 300 }}>
           <Story />
         </div>

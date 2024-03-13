@@ -1,12 +1,9 @@
 import React, { createContext, useContext, FC } from 'react';
-import "../globals.styles.css";
-import '../build/css/_variables.css';
+import '../globals.styles.css';
 
 // Defina a forma do seu tema
-interface Theme {
-  // defina as propriedades do seu tema
-  primaryColor?: string;
-  secondaryColor?: string;
+export interface Theme {
+  type: 'light' | 'dark';
 }
 
 // Defina o contexto do tema
@@ -17,6 +14,16 @@ export const ThemeProvider: FC<{ theme: Theme; children: React.ReactNode }> = ({
   theme,
   children,
 }) => {
+  
+  // Determine qual arquivo de variáveis CSS importar com base no tipo de tema
+  // if (theme.type === 'dark') {
+  //   // Importe as variáveis CSS escuras
+  //   import('../build/css/_variables-dark.css');
+  // } else if (theme.type === 'light'){
+  //   // Importe as variáveis CSS padrão
+  import('../build/css/_variables.css');
+  // }
+
   return (
     <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
   );
