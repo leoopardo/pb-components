@@ -1,6 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 import { Props, BigNumber } from '../src/Cards';
+import { ThemeProvider } from '../src/ThemeProvider';
 
 const meta: Meta = {
   title: 'Components/BigNumber',
@@ -16,12 +17,14 @@ const meta: Meta = {
     controls: { expanded: true },
   },
   decorators: [
-    (Story) => (
-      <div style={{ height: 150, width: 300 }}>
-        <Story />
-      </div>
+    Story => (
+      <ThemeProvider theme={{ primaryColor: 'red' }}>
+        <div style={{ height: 150, width: 300 }}>
+          <Story />
+        </div>
+      </ThemeProvider>
     ),
-  ]
+  ],
 };
 
 export default meta;

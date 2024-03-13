@@ -1,181 +1,181 @@
-# TSDX React w/ Storybook User Guide
+# Basic Style Dictionary
 
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
-
-> This TSDX setup is meant for developing React component libraries (not apps!) that can be published to NPM. If you’re looking to build a React-based app, you should use `create-react-app`, `razzle`, `nextjs`, `gatsby`, or `react-static`.
-
-> If you’re new to TypeScript and React, checkout [this handy cheatsheet](https://github.com/sw-yx/react-typescript-cheatsheet/)
-
-## Commands
-
-TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
-
-The recommended workflow is to run TSDX in one terminal:
-
+This example code is bare-bones to show you what this framework can do. If you have the style-dictionary module installed globally, you can `cd` into this directory and run:
 ```bash
-npm start # or yarn start
+style-dictionary build
 ```
 
-This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
+You should see something like this output:
+```
+Copying starter files...
 
-Then run either Storybook or the example playground:
+Source style dictionary starter files created!
 
-### Storybook
+Running `style-dictionary build` for the first time to generate build artifacts.
 
-Run inside another terminal:
 
-```bash
-yarn storybook
+scss
+✔︎  build/scss/_variables.scss
+
+android
+✔︎  build/android/font_dimens.xml
+✔︎  build/android/colors.xml
+
+compose
+✔︎ build/compose/StyleDictionaryColor.kt
+✔︎ build/compose/StyleDictionarySize.kt
+
+ios
+✔︎  build/ios/StyleDictionaryColor.h
+✔︎  build/ios/StyleDictionaryColor.m
+✔︎  build/ios/StyleDictionarySize.h
+✔︎  build/ios/StyleDictionarySize.m
+
+ios-swift
+✔︎  build/ios-swift/StyleDictionary.swift
+
+ios-swift-separate-enums
+✔︎  build/ios-swift/StyleDictionaryColor.swift
+✔︎  build/ios-swift/StyleDictionarySize.swift
 ```
 
-This loads the stories from `./stories`.
-
-> NOTE: Stories should reference the components as if using the library, similar to the example playground. This means importing from the root project directory. This has been aliased in the tsconfig and the storybook webpack config as a helper.
-
-### Example
-
-Then run the example inside another:
-
-```bash
-cd example
-npm i # or yarn to install dependencies
-npm start # or yarn start
+Good for you! You have now built your first style dictionary! Moving on, take a look at what we have built. This should have created a build directory and it should look like this:
+```
+├── README.md
+├── config.json
+├── tokens/
+│   ├── color/
+│       ├── base.json
+│       ├── font.json
+│   ├── size/
+│       ├── font.json
+├── build/
+│   ├── android/
+│      ├── font_dimens.xml
+│      ├── colors.xml
+│   ├── compose/
+│      ├── StyleDictionaryColor.kt
+│      ├── StyleDictionarySize.kt
+│   ├── scss/
+│      ├── _variables.scss
+│   ├── ios/
+│      ├── StyleDictionaryColor.h
+│      ├── StyleDictionaryColor.m
+│      ├── StyleDictionarySize.h
+│      ├── StyleDictionarySize.m
+│   ├── ios-swift/
+│      ├── StyleDictionary.swift
+│      ├── StyleDictionaryColor.swift
+│      ├── StyleDictionarySize.swift
 ```
 
-The default example imports and live reloads whatever is in `/dist`, so if you are seeing an out of date component, make sure TSDX is running in watch mode like we recommend above. **No symlinking required**, we use [Parcel's aliasing](https://parceljs.org/module_resolution.html#aliases).
+If you open `config.json` you will see there are 5 platforms defined: scss, android, compose, ios, and ios-swift. Each platform has a transformGroup, buildPath, and files. The buildPath and files of the platform should match up to the files what were built. The files built should look like these:
 
-To do a one-off build, use `npm run build` or `yarn build`.
+**Android**
+```xml
+<!-- font_dimens.xml -->
+<resources>
+  <dimen name="size_font_small">12.00sp</dimen>
+  <dimen name="size_font_medium">16.00sp</dimen>
+  <dimen name="size_font_large">32.00sp</dimen>
+  <dimen name="size_font_base">16.00sp</dimen>
+</resources>
 
-To run tests, use `npm test` or `yarn test`.
-
-## Configuration
-
-Code quality is set up for you with `prettier`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
-
-### Jest
-
-Jest tests are set up to run with `npm test` or `yarn test`.
-
-### Bundle analysis
-
-Calculates the real cost of your library using [size-limit](https://github.com/ai/size-limit) with `npm run size` and visulize it with `npm run analyze`.
-
-#### Setup Files
-
-This is the folder structure we set up for you:
-
-```txt
-/example
-  index.html
-  index.tsx       # test your component here in a demo app
-  package.json
-  tsconfig.json
-/src
-  index.tsx       # EDIT THIS
-/test
-  blah.test.tsx   # EDIT THIS
-/stories
-  Thing.stories.tsx # EDIT THIS
-/.storybook
-  main.js
-  preview.js
-.gitignore
-package.json
-README.md         # EDIT THIS
-tsconfig.json
+<!-- colors.xml -->
+<resources>
+  <color name="color_base_gray_light">#ffcccccc</color>
+  <color name="color_base_gray_medium">#ff999999</color>
+  <color name="color_base_gray_dark">#ff111111</color>
+  <color name="color_base_red">#ffff0000</color>
+  <color name="color_base_green">#ff00ff00</color>
+  <color name="color_font_base">#ffff0000</color>
+  <color name="color_font_secondary">#ff00ff00</color>
+  <color name="color_font_tertiary">#ffcccccc</color>
+</resources>
 ```
 
-#### React Testing Library
+**Compose**
+```kotlin
+object StyleDictionaryColor {
+  val colorBaseGrayDark = Color(0xff111111)
+  val colorBaseGrayLight = Color(0xffcccccc)
+  val colorBaseGrayMedium = Color(0xff999999)
+  val colorBaseGreen = Color(0xff00ff00)
+  val colorBaseRed = Color(0xffff0000)
+  val colorFontBase = Color(0xffff0000)
+  val colorFontSecondary = Color(0xff00ff00)
+  val colorFontTertiary = Color(0xffcccccc)
+}
 
-We do not set up `react-testing-library` for you yet, we welcome contributions and documentation on this.
-
-### Rollup
-
-TSDX uses [Rollup](https://rollupjs.org) as a bundler and generates multiple rollup configs for various module formats and build settings. See [Optimizations](#optimizations) for details.
-
-### TypeScript
-
-`tsconfig.json` is set up to interpret `dom` and `esnext` types, as well as `react` for `jsx`. Adjust according to your needs.
-
-## Continuous Integration
-
-### GitHub Actions
-
-Two actions are added by default:
-
-- `main` which installs deps w/ cache, lints, tests, and builds on all pushes against a Node and OS matrix
-- `size` which comments cost comparison of your library on every pull request using [size-limit](https://github.com/ai/size-limit)
-
-## Optimizations
-
-Please see the main `tsdx` [optimizations docs](https://github.com/palmerhq/tsdx#optimizations). In particular, know that you can take advantage of development-only optimizations:
-
-```js
-// ./types/index.d.ts
-declare var __DEV__: boolean;
-
-// inside your code...
-if (__DEV__) {
-  console.log('foo');
+object StyleDictionarySize {
+  /** the base size of the font */
+  val sizeFontBase = 16.00.sp
+  /** the large size of the font */
+  val sizeFontLarge = 32.00.sp
+  /** the medium size of the font */
+  val sizeFontMedium = 16.00.sp
+  /** the small size of the font */
+  val sizeFontSmall = 12.00.sp
 }
 ```
 
-You can also choose to install and use [invariant](https://github.com/palmerhq/tsdx#invariant) and [warning](https://github.com/palmerhq/tsdx#warning) functions.
-
-## Module Formats
-
-CJS, ESModules, and UMD module formats are supported.
-
-The appropriate paths are configured in `package.json` and `dist/index.js` accordingly. Please report if any issues are found.
-
-## Deploying the Example Playground
-
-The Playground is just a simple [Parcel](https://parceljs.org) app, you can deploy it anywhere you would normally deploy that. Here are some guidelines for **manually** deploying with the Netlify CLI (`npm i -g netlify-cli`):
-
-```bash
-cd example # if not already in the example folder
-npm run build # builds to dist
-netlify deploy # deploy the dist folder
+**SCSS**
+```scss
+// variables.scss
+$color-base-gray-light: #cccccc;
+$color-base-gray-medium: #999999;
+$color-base-gray-dark: #111111;
+$color-base-red: #ff0000;
+$color-base-green: #00ff00;
+$color-font-base: #ff0000;
+$color-font-secondary: #00ff00;
+$color-font-tertiary: #cccccc;
+$size-font-small: 0.75rem;
+$size-font-medium: 1rem;
+$size-font-large: 2rem;
+$size-font-base: 1rem;
 ```
 
-Alternatively, if you already have a git repo connected, you can set up continuous deployment with Netlify:
+**iOS**
+```objc
+#import "StyleDictionaryColor.h"
 
-```bash
-netlify init
-# build command: yarn build && cd example && yarn && yarn build
-# directory to deploy: example/dist
-# pick yes for netlify.toml
+@implementation StyleDictionaryColor
+
++ (UIColor *)color:(StyleDictionaryColorName)colorEnum{
+  return [[self values] objectAtIndex:colorEnum];
+}
+
++ (NSArray *)values {
+  static NSArray* colorArray;
+  static dispatch_once_t onceToken;
+
+  dispatch_once(&onceToken, ^{
+    colorArray = @[
+[UIColor colorWithRed:0.800f green:0.800f blue:0.800f alpha:1.000f],
+[UIColor colorWithRed:0.600f green:0.600f blue:0.600f alpha:1.000f],
+[UIColor colorWithRed:0.067f green:0.067f blue:0.067f alpha:1.000f],
+[UIColor colorWithRed:1.000f green:0.000f blue:0.000f alpha:1.000f],
+[UIColor colorWithRed:0.000f green:1.000f blue:0.000f alpha:1.000f],
+[UIColor colorWithRed:1.000f green:0.000f blue:0.000f alpha:1.000f],
+[UIColor colorWithRed:0.000f green:1.000f blue:0.000f alpha:1.000f],
+[UIColor colorWithRed:0.800f green:0.800f blue:0.800f alpha:1.000f]
+    ];
+  });
+
+  return colorArray;
+}
+
+@end
 ```
 
-## Named Exports
+Pretty nifty! This shows a few things happening:
+1. The build system does a deep merge of all the token JSON files defined in the `source` attribute of `config.json`. This allows you to split up the token JSON files however you want. There are 2 JSON files with `color` as the top level key, but they get merged properly.
+1. The build system resolves references to other design tokens. `{size.font.medium.value}` gets resolved properly.
+1. The build system handles references to token values in other files as well as you can see in `tokens/color/font.json`.
 
-Per Palmer Group guidelines, [always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
+Now let's make a change and see how that affects things. Open up `tokens/color/base.json` and change `"#111111"` to `"#000000"`. After you make that change, save the file and re-run the build command `style-dictionary build`. Open up the build files and take a look.
 
-## Including Styles
+**Huzzah!**
 
-There are many ways to ship styles, including with CSS-in-JS. TSDX has no opinion on this, configure how you like.
-
-For vanilla CSS, you can include it at the root directory and add it to the `files` section in your `package.json`, so that it can be imported separately by your users and run through their bundler's loader.
-
-## Publishing to NPM
-
-We recommend using [np](https://github.com/sindresorhus/np).
-
-## Usage with Lerna
-
-When creating a new package with TSDX within a project set up with Lerna, you might encounter a `Cannot resolve dependency` error when trying to run the `example` project. To fix that you will need to make changes to the `package.json` file _inside the `example` directory_.
-
-The problem is that due to the nature of how dependencies are installed in Lerna projects, the aliases in the example project's `package.json` might not point to the right place, as those dependencies might have been installed in the root of your Lerna project.
-
-Change the `alias` to point to where those packages are actually installed. This depends on the directory structure of your Lerna project, so the actual path might be different from the diff below.
-
-```diff
-   "alias": {
--    "react": "../node_modules/react",
--    "react-dom": "../node_modules/react-dom"
-+    "react": "../../../node_modules/react",
-+    "react-dom": "../../../node_modules/react-dom"
-   },
-```
-
-An alternative to fixing this problem would be to remove aliases altogether and define the dependencies referenced as aliases as dev dependencies instead. [However, that might cause other problems.](https://github.com/palmerhq/tsdx/issues/64)
+Now go forth and create! Take a look at all the built-in [transforms](https://amzn.github.io/style-dictionary/#/transforms?id=pre-defined-transforms) and [formats](https://amzn.github.io/style-dictionary/#/formats?id=pre-defined-formats).
