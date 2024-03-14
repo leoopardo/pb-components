@@ -1,40 +1,34 @@
 {
   "source": ["tokens/**/*.json"],
+  "transforms": {
+    "permutations": {
+      "type": "function",
+      "function": "permutateThemes",
+      "data": "$themes.json",
+      "output": "permutations.json"
+    }
+  },
   "platforms": {
     "scss": {
-      "transformGroup": "css",
+      "transformGroup": "scss",
       "buildPath": "build/css/",
       "files": [
         {
-          "destination": "_variables.css",
+          "destination": "vars-%key%.css",
           "format": "css/variables"
         }
       ]
     },
-    "compose": {
-      "transformGroup": "compose",
-      "buildPath": "build/compose/",
+    "js": {
+      "transformGroup": "js",
+      "buildPath": "build/js/",
       "files": [
         {
-          "destination": "StyleDictionaryColor.kt",
-          "format": "compose/object",
-          "className": "StyleDictionaryColor",
-          "packageName": "StyleDictionaryColor",
+          "destination": "variables-%key%.js",
+          "format": "javascript/es6",
           "filter": {
             "attributes": {
-              "category": "color"
-            }
-          }
-        },
-        {
-          "destination": "StyleDictionarySize.kt",
-          "format": "compose/object",
-          "className": "StyleDictionarySize",
-          "packageName": "StyleDictionarySize",
-          "type": "float",
-          "filter": {
-            "attributes": {
-              "category": "size"
+              "category": "theme"
             }
           }
         }

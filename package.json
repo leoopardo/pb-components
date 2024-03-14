@@ -3,6 +3,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "type": "module",
   "files": [
     "dist",
     "src"
@@ -78,5 +79,8 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.6.2",
     "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@tokens-studio/sd-transforms": "^0.14.4"
   }
 }
