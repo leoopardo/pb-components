@@ -71,6 +71,14 @@
     "gap": {
       "value": "{gap.xs2}",
       "type": "spacing"
+    },
+    "border": {
+      "value": {
+        "color": "{tag.stroke.default}",
+        "width": "{tag.border-width.default}",
+        "style": "solid"
+      },
+      "type": "border"
     }
   }
 }
