@@ -2,8 +2,9 @@
   "tokenSetOrder": [
     "global/primitive",
     "global/semantic",
+    "color/default/config",
+    "color/test/config",
     "brand/typography",
-    "brand/color/config",
     "brand/color/scheme",
     "brand/color/theme/light",
     "brand/color/theme/dark",

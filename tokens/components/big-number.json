@@ -118,8 +118,14 @@
     },
     "size": {
       "icon": {
-        "value": "{size.lg}",
-        "type": "sizing"
+        "bg": {
+          "value": "{size.lg}",
+          "type": "sizing"
+        },
+        "item": {
+          "value": "{size.xs2}",
+          "type": "sizing"
+        }
       }
     },
     "total": {
@@ -145,6 +151,36 @@
       },
       "value": {
         "value": "{typography.desktop.regular.label-sm}",
+        "type": "typography"
+      }
+    },
+    "border": {
+      "default": {
+        "value": {
+          "color": "{theme.border-color.surface.default}",
+          "width": "{border-width.thin}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "total": {
+        "default": {
+          "value": {
+            "color": "{big-number.bg.total.border}",
+            "width": "{border-width.thin}",
+            "style": "solid"
+          },
+          "type": "border"
+        }
+      }
+    },
+    "text": {
+      "label": {
+        "value": "{typography.desktop.medium.label-sm}",
+        "type": "typography"
+      },
+      "value": {
+        "value": "{typography.desktop.h6}",
         "type": "typography"
       }
     }
