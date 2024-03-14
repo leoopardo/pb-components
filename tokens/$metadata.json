@@ -10,6 +10,7 @@
     "brand/color/theme/dark",
     "components/button",
     "components/tag",
-    "components/big-number"
+    "components/big-number",
+    "components/table"
   ]
 }

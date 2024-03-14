@@ -368,6 +368,22 @@
           "type": "color"
         }
       }
+    },
+    "logo": {
+      "symbol": {
+        "up": {
+          "value": "{theme.bg.brand.secondary}",
+          "type": "color"
+        },
+        "down": {
+          "value": "{color.neutral.50}",
+          "type": "color"
+        }
+      },
+      "text": {
+        "value": "{color.neutral.50}",
+        "type": "color"
+      }
     }
   }
 }
