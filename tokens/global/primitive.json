@@ -392,23 +392,23 @@
   "breakpoint": {
     "xl": {
       "value": "1920",
-      "type": "Breakpoint"
+      "type": "sizing"
     },
     "lg": {
       "value": "1440",
-      "type": "Breakpoint"
+      "type": "sizing"
     },
     "md": {
       "value": "1080",
-      "type": "Breakpoint"
+      "type": "sizing"
     },
     "sm": {
       "value": "720",
-      "type": "Breakpoint"
+      "type": "sizing"
     },
     "xs": {
       "value": "360",
-      "type": "Breakpoint"
+      "type": "sizing"
     }
   },
   "z-index": {
