@@ -8,6 +8,7 @@
     "brand/color/scheme",
     "brand/color/theme/light",
     "brand/color/theme/dark",
+    "components/avatar",
     "components/button",
     "components/tag",
     "components/bignumber",
