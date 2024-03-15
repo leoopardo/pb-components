@@ -314,8 +314,7 @@
           },
           "disabled": {
             "value": "{theme.fg.surface.muted}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           }
         },
         "chevron": {
@@ -341,8 +340,7 @@
           },
           "disabled": {
             "value": "{theme.fg.surface.muted}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           }
         }
       },
@@ -543,6 +541,18 @@
         "dragged": {
           "value": "{opacity.50}",
           "type": "opacity"
+        }
+      }
+    },
+    "icon": {
+      "padding": {
+        "large": {
+          "value": "{spacing.inset.sm}",
+          "type": "spacing"
+        },
+        "medium": {
+          "value": "{spacing.inset.xs}",
+          "type": "spacing"
         }
       }
     }
