@@ -13,6 +13,7 @@
     "components/tag",
     "components/bignumber",
     "components/table",
-    "components/carousel"
+    "components/carousel",
+    "components/radio"
   ]
 }
