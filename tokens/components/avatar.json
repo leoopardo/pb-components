@@ -21,7 +21,7 @@
     "bg": {
       "initials": {
         "default": {
-          "value": "{theme.bg.brand.primary}",
+          "value": "{theme.bg.surface.avatar}",
           "type": "color"
         }
       }
@@ -60,6 +60,12 @@
       "xl": {
         "value": "{size.xl3}",
         "type": "sizing"
+      }
+    },
+    "fg": {
+      "initials": {
+        "value": "{theme.fg.surface.avatar}",
+        "type": "color"
       }
     }
   }

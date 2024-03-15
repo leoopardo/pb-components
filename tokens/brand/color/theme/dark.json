@@ -21,6 +21,10 @@
         "dashboard": {
           "value": "{color.neutral.1600}",
           "type": "color"
+        },
+        "avatar": {
+          "value": "{theme.bg.brand.secondary}",
+          "type": "color"
         }
       },
       "brand": {
@@ -167,6 +171,10 @@
         },
         "muted": {
           "value": "{color.neutral.1000}",
+          "type": "color"
+        },
+        "avatar": {
+          "value": "{color.neutral.50}",
           "type": "color"
         }
       },

@@ -445,6 +445,7 @@
       "avatar.size.medium": "b04c5342f8b7283bdae6742c3daa0a683c31681b",
       "avatar.size.large": "c9408069fc4f8caa2faadba999fa60657e1f6a4e",
       "avatar.size.xl": "3f8fec45191f6dc09f1ebee2f69e2a39b92a9a74",
+      "avatar.fg.initials": "1a8d0b08e7e177a17d09c2b3e17bb73b3800db53",
       "theme.bg.surface.main": "7f5a88144e517fd15ec49eb8f1eaf5f24a04c372",
       "theme.bg.surface.moderate": "0c95610a0f4a0fdca754ac4a5331954279032384",
       "theme.bg.surface.strong": "7489572035ba17f1cfab4c4af052b07265e5352f",
@@ -519,6 +520,8 @@
       "theme.logo.symbol.up": "a919f0d49845d7e4f8da29226c97027d6cf4c20d",
       "theme.logo.symbol.down": "8ee7a72b6c34f02b3200846c2bd50ff527cb0e44",
       "theme.logo.text": "5055644bf5d07857ce1031caa51cc0bcf167878f",
+      "theme.bg.surface.avatar": "55e2feff21270828cd0e9316723b880de18b2aca",
+      "theme.fg.surface.avatar": "36d245a16cf4de8896c7b8d9f50aaca6a4f6c402",
       "color.primary.100": "382ff522ef7fe49a68f1f19270b19fcd8505ad6c",
       "color.primary.200": "e7b7b6ba848376b54b51ce8255b3ee2ba1adbbc7",
       "color.primary.300": "19fccc5e90534f906a50724f3da1791807cd6d78",
@@ -997,6 +1000,7 @@
       "avatar.size.medium": "b04c5342f8b7283bdae6742c3daa0a683c31681b",
       "avatar.size.large": "c9408069fc4f8caa2faadba999fa60657e1f6a4e",
       "avatar.size.xl": "3f8fec45191f6dc09f1ebee2f69e2a39b92a9a74",
+      "avatar.fg.initials": "1a8d0b08e7e177a17d09c2b3e17bb73b3800db53",
       "theme.bg.surface.main": "7f5a88144e517fd15ec49eb8f1eaf5f24a04c372",
       "theme.bg.surface.moderate": "0c95610a0f4a0fdca754ac4a5331954279032384",
       "theme.bg.surface.strong": "7489572035ba17f1cfab4c4af052b07265e5352f",
@@ -1071,6 +1075,8 @@
       "theme.logo.symbol.up": "a919f0d49845d7e4f8da29226c97027d6cf4c20d",
       "theme.logo.symbol.down": "8ee7a72b6c34f02b3200846c2bd50ff527cb0e44",
       "theme.logo.text": "5055644bf5d07857ce1031caa51cc0bcf167878f",
+      "theme.bg.surface.avatar": "55e2feff21270828cd0e9316723b880de18b2aca",
+      "theme.fg.surface.avatar": "36d245a16cf4de8896c7b8d9f50aaca6a4f6c402",
       "color.primary.100": "382ff522ef7fe49a68f1f19270b19fcd8505ad6c",
       "color.primary.200": "e7b7b6ba848376b54b51ce8255b3ee2ba1adbbc7",
       "color.primary.300": "19fccc5e90534f906a50724f3da1791807cd6d78",
@@ -1414,8 +1420,7 @@
     "name": "paybrokers",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "config/paybrokers": "enabled",
-      "components/avatar": "disabled"
+      "config/paybrokers": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:324:20598",
     "$figmaModeId": "324:13",
@@ -1441,8 +1446,7 @@
     "name": "test",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "config/test": "enabled",
-      "components/avatar": "disabled"
+      "config/test": "enabled"
     },
     "group": "brand",
     "$figmaCollectionId": "VariableCollectionId:324:20598",
