@@ -17,8 +17,9 @@ const meta: Meta = {
     controls: { expanded: true },
   },
   args: {
-    children: 'Text',
-    type: 'display',
+    variant: 'display',
+    children: "Hello World!",
+    level: 1,
   },
   decorators: [
     Story => (

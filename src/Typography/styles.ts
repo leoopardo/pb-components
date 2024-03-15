@@ -21,7 +21,8 @@ const labelSizes: any = {
 export const Typography = styled.h1<{
   variant: 'display' | 'head' | 'body' | 'label';
   level?: 1 | 2 | 3 | 4 | 5 | 6;
-}>(({ theme, variant, level }) => ({
+  weight?: 'regular' | 'medium' | 'bold';
+}>(({ theme, variant, level, weight }) => ({
   fontFamily: ['display', 'head', 'label'].includes(variant)
     ? 'GothamPro'
     : 'Inter',
@@ -35,12 +36,20 @@ export const Typography = styled.h1<{
       : theme['font-size'][labelSizes[level as any]],
   fontWeight:
     variant === 'display'
-      ? theme['font-size'].display
-      : variant === 'head' && level && level > 6
-      ? theme['font-weight'].title.bold
+      ? theme['font-weight'].display
+      : variant === 'body'
+      ? weight === 'regular'
+        ? theme['font-weight'].body.regular
+        : weight === 'medium'
+        ? theme['font-weight'].body.medium
+        : theme['font-weight'].body.bold
       : variant === 'head'
-      ? theme['font-weight'].title.medium
-      : variant === 'label'
-      ? theme['font-weight'].label
-      : theme['font-weight'].body.regular,
+      ? weight === 'medium'
+        ? theme['font-weight'].title.medium
+        : theme['font-weight'].title.bold
+      : variant === 'label' && theme['font-weight'].label,
+  letterSpacing: theme['letter-spacing'].h1,
+  color: theme.theme.fg.surface.default,
+  lineHeight:
+    variant === 'display' ? theme['line-height'].xs : theme['line-height'].sm,
 }));
