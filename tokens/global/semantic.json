@@ -803,55 +803,37 @@
       "type": "other"
     }
   },
-  "font-family": {
-    "brand": {
-      "value": "Gotham Pro",
-      "type": "fontFamilies"
-    },
-    "plain": {
-      "value": "Inter",
-      "type": "fontFamilies"
-    },
-    "alt": {
-      "value": "Fira Cold",
-      "type": "fontFamilies"
-    },
-    "icon": {
-      "value": "Fontawesome",
-      "type": "fontFamilies"
-    }
-  },
   "font-weight": {
     "display": {
-      "value": "Black",
+      "value": "900",
       "type": "fontWeights"
     },
     "title": {
       "bold": {
-        "value": "Bold",
+        "value": "700",
         "type": "fontWeights"
       },
       "medium": {
-        "value": "Medium",
+        "value": "500",
         "type": "fontWeights"
       }
     },
     "body": {
       "regular": {
-        "value": "Regular",
+        "value": "400",
         "type": "fontWeights"
       },
       "medium": {
-        "value": "Medium",
+        "value": "500",
         "type": "fontWeights"
       },
       "bold": {
-        "value": "Bold",
+        "value": "700",
         "type": "fontWeights"
       }
     },
     "label": {
-      "value": "Medium",
+      "value": "500",
       "type": "fontWeights"
     }
   },
@@ -871,28 +853,6 @@
     "lg": {
       "value": "180%",
       "type": "lineHeights"
-    }
-  },
-  "typography": {
-    "display": {
-      "lg": {
-        "value": {
-          "fontFamily": "{font-family.brand}",
-          "fontWeight": "{font-weight.display}",
-          "fontSize": "{font-size.54}",
-          "lineHeight": "{line-height.xs}"
-        },
-        "type": "typography"
-      },
-      "md": {
-        "value": {
-          "fontFamily": "{font-family.brand}",
-          "fontWeight": "{font-weight.display}",
-          "fontSize": "{font-size.50}px",
-          "lineHeight": "{line-height.xs}"
-        },
-        "type": "typography"
-      }
     }
   },
   "letter-spacing": {

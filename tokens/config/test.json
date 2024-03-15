@@ -1,27 +1,27 @@
 {
   "scheme": {
     "primary": {
-      "value": "#182845",
+      "value": "#3366FF",
       "type": "color"
     },
     "secondary": {
-      "value": "#35B6B4",
+      "value": "#8031bf",
       "type": "color"
     },
     "neutral": {
-      "value": "#808ba8",
+      "value": "#7886af",
       "type": "color"
     },
     "success": {
-      "value": "#3B9B76",
+      "value": "#59BF31",
       "type": "color"
     },
     "danger": {
-      "value": "#D14343",
+      "value": "#ff265b",
       "type": "color"
     },
     "warning": {
-      "value": "#FFB020",
+      "value": "#FFC507",
       "type": "color"
     },
     "data": {
@@ -53,6 +53,28 @@
         "value": "#66a61e",
         "type": "color"
       }
+    }
+  },
+  "font-family": {
+    "brand": {
+      "value": "Poppins",
+      "type": "fontFamilies",
+      "description": "Fonte característica da marca, normalmente utilizadas em estilos do tipo Display e Title."
+    },
+    "plain": {
+      "value": "Inter",
+      "type": "fontFamilies",
+      "description": "Fonte genérica para textos."
+    },
+    "alt": {
+      "value": "Fira Cold",
+      "type": "fontFamilies",
+      "description": "Fonte alternativa para dar diferenciar alguns tipos de texto."
+    },
+    "icon": {
+      "value": "Fontawesome",
+      "type": "fontFamilies",
+      "description": "Família de fonte para ícones."
     }
   }
 }

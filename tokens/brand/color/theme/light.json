@@ -390,11 +390,11 @@
     "logo": {
       "symbol": {
         "up": {
-          "value": "linear-gradient(88deg, #167671 0%, #5BC3BC 100%);",
+          "value": "{theme.bg.brand.secondary}",
           "type": "color"
         },
         "down": {
-          "value": "linear-gradient(89deg, #001431 0.46%, #18466D 99.23%);",
+          "value": "{theme.bg.brand.primary}",
           "type": "color"
         }
       },

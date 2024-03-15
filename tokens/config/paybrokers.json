@@ -1,27 +1,27 @@
 {
   "scheme": {
     "primary": {
-      "value": "#3366FF",
+      "value": "#182845",
       "type": "color"
     },
     "secondary": {
-      "value": "#8031bf",
+      "value": "#35B6B4",
       "type": "color"
     },
     "neutral": {
-      "value": "#7886af",
+      "value": "#808ba8",
       "type": "color"
     },
     "success": {
-      "value": "#59BF31",
+      "value": "#3B9B76",
       "type": "color"
     },
     "danger": {
-      "value": "#ff265b",
+      "value": "#D14343",
       "type": "color"
     },
     "warning": {
-      "value": "#FFC507",
+      "value": "#FFB020",
       "type": "color"
     },
     "data": {
@@ -53,6 +53,28 @@
         "value": "#66a61e",
         "type": "color"
       }
+    }
+  },
+  "font-family": {
+    "brand": {
+      "value": "Gotham Pro",
+      "type": "fontFamilies",
+      "description": "Fonte característica da marca, normalmente utilizadas em estilos do tipo Display e Title."
+    },
+    "plain": {
+      "value": "Inter",
+      "type": "fontFamilies",
+      "description": "Fonte genérica para textos."
+    },
+    "alt": {
+      "value": "Fira Cold",
+      "type": "fontFamilies",
+      "description": "Fonte alternativa para dar diferenciar alguns tipos de texto."
+    },
+    "icon": {
+      "value": "Fontawesome",
+      "type": "fontFamilies",
+      "description": "Família de fonte para ícones."
     }
   }
 }

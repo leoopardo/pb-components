@@ -2,8 +2,8 @@
   "tokenSetOrder": [
     "global/primitive",
     "global/semantic",
-    "color/default/config",
-    "color/test/config",
+    "config/paybrokers",
+    "config/test",
     "brand/typography",
     "brand/color/scheme",
     "brand/color/theme/light",
