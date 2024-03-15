@@ -1498,8 +1498,7 @@
     "name": "paybrokers",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "config/paybrokers": "enabled",
-      "components/radio": "disabled"
+      "config/paybrokers": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:324:20598",
     "$figmaModeId": "324:13",
@@ -1525,8 +1524,7 @@
     "name": "test",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "config/test": "enabled",
-      "components/radio": "disabled"
+      "config/test": "enabled"
     },
     "group": "brand",
     "$figmaCollectionId": "VariableCollectionId:324:20598",
