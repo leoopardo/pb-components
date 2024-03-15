@@ -6,12 +6,12 @@ registerTransforms(StyleDictionary);
 function getStyleDictionaryConfig(theme) {
   return {
     source: [
-      'tokens/brand/typography.json',
-      'tokens/brand/color/scheme.json',
-      'tokens/color/default/config.json',
-      'tokens/color/default/config.json',
       'tokens/global/primitive.json',
       'tokens/global/semantic.json',
+      'tokens/config/paybrokers.json',
+      'tokens/config/test.json',
+      'tokens/brand/typography.json',
+      'tokens/brand/color/scheme.json',
       `tokens/brand/color/theme/${theme}.json`,
       'tokens/components/*.json',
     ],
@@ -27,15 +27,13 @@ function getStyleDictionaryConfig(theme) {
         ],
       },
       json: {
+        
         transformGroup: 'tokens-studio',
         buildPath: `styles/json/`,
         files: [
           {
             destination: `${theme}.json`,
             format: 'json/nested',
-            options: {
-              outputReferences: true,
-            },
           },
         ],
       },

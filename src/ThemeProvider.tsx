@@ -3,7 +3,7 @@ import "../build/css/_variables.css"
 
 // Defina a forma do seu tema
 export interface Theme {
-  type: 'light' | 'dark';
+  theme: 'light' | 'dark';
 }
 
 // Defina o contexto do tema

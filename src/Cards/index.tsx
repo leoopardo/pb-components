@@ -11,10 +11,10 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const BigNumber: FC<Props> = ({ header }) => {
-  const { type } = useTheme();
+  const { theme } = useTheme();
   return (
-    <ThemeProvider theme={type === 'dark' ? dark : light}>
-      <StyledCard provided-theme={type}>
+    <ThemeProvider theme={theme === 'dark' ? dark : light}>
+      <StyledCard provided-theme={theme}>
         {header && <h1 className="pb-component-card-header">{header}</h1>}
       </StyledCard>
     </ThemeProvider>

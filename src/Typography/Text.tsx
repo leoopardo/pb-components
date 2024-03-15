@@ -1,18 +1,19 @@
-import React, { FC, HTMLAttributes } from 'react';
-import { useTheme } from '../ThemeProvider';
-import './styles.css';
+import React, { FC, HTMLAttributes, ReactChild } from 'react';
+import { ProvideTheme } from '../ProvideTheme';
+import { Typography } from './styles';
 
 export interface Props extends HTMLAttributes<HTMLDivElement> {
-  type?: 'display' | 'head' | 'body' | 'label';
+  children: ReactChild;
+  variant: 'display' | 'head' | 'body' | 'label';
+  level?: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
-export const Text: FC<Props> = ({ type }) => {
-  const theme = useTheme();
-  return type === 'display' ? (
-    <h1 className="pb-component-text" provided-theme={theme}>
-      Display Text
-    </h1>
-  ) : (
-    <></>
+export const Text: FC<Props> = ({ children, variant, level }) => {
+  return (
+    <ProvideTheme>
+      <Typography variant={variant} level={level}>
+        {children}
+      </Typography>
+    </ProvideTheme>
   );
 };

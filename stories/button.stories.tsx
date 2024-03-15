@@ -1,11 +1,11 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
-import { Props, BigNumber } from '../src/Cards';
+import { Props, Button } from '../src/Button';
 import { ThemeProvider } from '../src/ThemeProvider';
 
 const meta: Meta = {
-  title: 'Components/BigNumber',
-  component: BigNumber,
+  title: 'Components/Button',
+  component: Button,
   argTypes: {
     children: {
       control: {
@@ -16,12 +16,15 @@ const meta: Meta = {
   parameters: {
     controls: { expanded: true },
   },
+  args: {
+    children: 'Button',
+    variant: 'filled',
+    style: {width: '200px'}
+  },
   decorators: [
     Story => (
       <ThemeProvider theme={{theme: "light"}}>
-        <div style={{ height: 150, width: 300 }}>
-          <Story />
-        </div>
+          {Story()}
       </ThemeProvider>
     ),
   ],
@@ -29,7 +32,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: StoryFn<Props> = args => <BigNumber {...args} />;
+const Template: StoryFn<Props> = args => <Button {...args}  />;
 
 // By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
 // https://storybook.js.org/docs/react/workflows/unit-testing
