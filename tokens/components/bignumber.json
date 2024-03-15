@@ -1,5 +1,5 @@
 {
-  "big-number": {
+  "bignumber": {
     "padding": {
       "desktop": {
         "value": "{spacing.inset.xl}",
@@ -75,18 +75,6 @@
     "value": {
       "value": "{theme.fg.surface.default}",
       "type": "color"
-    },
-    "typography": {
-      "label": {
-        "desktop": {
-          "value": "{typography.desktop.medium.label-card}",
-          "type": "typography"
-        }
-      },
-      "value": {
-        "desktop": "[object Object]"
-      },
-      "type": "other"
     },
     "gap": {
       "content": {
@@ -166,7 +154,7 @@
       "total": {
         "default": {
           "value": {
-            "color": "{big-number.bg.total.border}",
+            "color": "{bignumber.bg.total.border}",
             "width": "{border-width.thin}",
             "style": "solid"
           },

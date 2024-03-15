@@ -12,25 +12,7 @@
       "height": {
         "value": "{size.xl4}",
         "type": "sizing"
-      }
-    },
-    "row": {
-      "padding": {
-        "value": "{padding.sm}",
-        "type": "spacing"
       },
-      "gap": {
-        "value": "{gap.xs2}",
-        "type": "spacing"
-      },
-      "border-width": {
-        "value": "{border-width.thin}",
-        "type": "borderWidth"
-      }
-    }
-  },
-  "tabel": {
-    "header": {
       "bg": {
         "value": "{theme.bg.surface.moderate}",
         "type": "color"
@@ -49,6 +31,18 @@
       }
     },
     "row": {
+      "padding": {
+        "value": "{padding.sm}",
+        "type": "spacing"
+      },
+      "gap": {
+        "value": "{gap.xs2}",
+        "type": "spacing"
+      },
+      "border-width": {
+        "value": "{border-width.thin}",
+        "type": "borderWidth"
+      },
       "bg": {
         "default": {
           "value": "{color.neutral.0}",
