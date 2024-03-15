@@ -313,8 +313,8 @@
       "brand/typography": "enabled",
       "components/button": "enabled",
       "components/tag": "enabled",
-      "components/big-number": "enabled",
-      "components/table": "enabled"
+      "components/table": "enabled",
+      "components/bignumber": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:324:20076",
     "$figmaModeId": "324:11",
@@ -855,8 +855,8 @@
       "brand/typography": "enabled",
       "components/button": "enabled",
       "components/tag": "enabled",
-      "components/big-number": "enabled",
-      "components/table": "enabled"
+      "components/table": "enabled",
+      "components/bignumber": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:324:20076",
     "$figmaModeId": "324:12",
@@ -1390,7 +1390,8 @@
     "name": "paybrokers",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "config/paybrokers": "enabled"
+      "config/paybrokers": "enabled",
+      "components/bignumber": "disabled"
     },
     "$figmaCollectionId": "VariableCollectionId:324:20598",
     "$figmaModeId": "324:13",
@@ -1416,7 +1417,8 @@
     "name": "test",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "config/test": "enabled"
+      "config/test": "enabled",
+      "components/bignumber": "disabled"
     },
     "group": "brand",
     "$figmaCollectionId": "VariableCollectionId:324:20598",
