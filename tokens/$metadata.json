@@ -12,6 +12,7 @@
     "components/button",
     "components/tag",
     "components/bignumber",
-    "components/table"
+    "components/table",
+    "components/carousel"
   ]
 }

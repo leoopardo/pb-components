@@ -176,6 +176,19 @@
         "avatar": {
           "value": "{color.neutral.50}",
           "type": "color"
+        },
+        "upsurface": {
+          "value": "{color.neutral.50}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "{modifier.47} ",
+                "space": "lch"
+              }
+            }
+          }
         }
       },
       "brand": {

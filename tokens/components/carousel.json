@@ -1,0 +1,59 @@
+{
+  "carousel": {
+    "point": {
+      "size": {
+        "value": "{size.xs3}",
+        "type": "sizing"
+      },
+      "borderRadius": {
+        "value": "{border-radius.pill}",
+        "type": "borderRadius"
+      },
+      "bg": {
+        "deactive": {
+          "value": "{theme.fg.surface.upsurface}",
+          "type": "color"
+        },
+        "active": {
+          "value": "{theme.bg.brand.secondary}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{theme.bg.brand.secondary}",
+          "type": "color"
+        }
+      },
+      "stroke": {
+        "hover": {
+          "value": "{theme.bg.brand.secondary}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "{modifier.37} ",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "border": {
+        "hover": {
+          "value": {
+            "color": "{carousel.point.stroke.hover}",
+            "width": "{border-width.medium}",
+            "style": "solid"
+          },
+          "type": "border"
+        }
+      }
+    },
+    "content": {
+      "gap": {
+        "value": "{gap.xs}",
+        "type": "spacing"
+      }
+    }
+  }
+}
