@@ -2,6 +2,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 import { Props, Button } from '../src/Button';
 import { ThemeProvider } from '../src/ThemeProvider';
+import { Icon } from '../src/Icon';
 
 const meta: Meta = {
   title: 'Components/Button',
@@ -19,7 +20,9 @@ const meta: Meta = {
   args: {
     children: 'Button',
     variant: 'filled',
-    style: {width: '200px'}
+    style: {width: '200px'},
+    icon: <Icon name='ArrowSmallRightIcon'/>,
+    iconPosition: 'right'
   },
   decorators: [
     Story => (
