@@ -753,7 +753,8 @@
         "moderate": "rgb(17.9% 20% 26.1%)",
         "muted": "rgb(26.4% 29.4% 38.4%)",
         "avatar": "rgb(100% 100% 100%)",
-        "upsurface": "lch(100 0 0 / 0.08)"
+        "upsurface": "lch(100 0 0 / 0.08)",
+        "inverted": "rgb(100% 100% 100%)"
       },
       "brand": {
         "primary": "rgb(31.2% 48.4% 100%)",
@@ -859,10 +860,80 @@
     }
   },
   "bignumber": {
-    "value": "rgb(3.76% 4.2% 5.49%)",
-    "type": "color",
-    "filePath": "tokens/components/bignumber.json",
-    "isSource": true
+    "padding": {
+      "desktop": "24 24 24",
+      "total": "0 8"
+    },
+    "bg": {
+      "content": "rgb(95.8% 96.2% 97.5%)",
+      "icon": {
+        "content": {
+          "success": "lch(69.3 75.9 131 / 0.1)",
+          "danger": "lch(56.4 83.6 20.3 / 0.1)",
+          "warning": "lch(83.1 83.9 82 / 0.1)",
+          "default": "lch(56 23.7 275 / 0.1)",
+          "neutral": "lch(70.5 46.8 236 / 0.1)"
+        },
+        "color": {
+          "success": "#59BF31",
+          "danger": "#ff265b",
+          "warning": "rgb(76% 58.7% 2.09%)",
+          "default": "rgb(40.5% 45.2% 59%)",
+          "neutral": "rgb(0% 63.4% 81.6%)"
+        }
+      },
+      "total": {
+        "text": "rgb(17.9% 20% 26.1%)",
+        "border": "rgb(17.9% 20% 26.1%)"
+      }
+    },
+    "fg": {
+      "value": "rgb(3.76% 4.2% 5.49%)",
+      "type": "color",
+      "filePath": "tokens/components/bignumber.json",
+      "isSource": true
+    },
+    "gap": {
+      "value": 4,
+      "type": "spacing",
+      "filePath": "tokens/components/bignumber.json",
+      "isSource": true
+    },
+    "borderRadius": {
+      "content": 8,
+      "icon": 8,
+      "total": "100000px"
+    },
+    "size": {
+      "icon": {
+        "bg": 36,
+        "item": 16
+      },
+      "total": {
+        "height": 20
+      }
+    },
+    "borderWidth": {
+      "total": "1px"
+    },
+    "total": {
+      "value": "400 12px/1 Inter",
+      "type": "typography",
+      "filePath": "tokens/components/bignumber.json",
+      "isSource": true
+    },
+    "border": {
+      "default": "1px solid rgb(85.2% 86.7% 91.2%)",
+      "total": {
+        "default": "1px solid rgb(17.9% 20% 26.1%)"
+      }
+    },
+    "text": {
+      "value": "500 18px/1.3 Poppins",
+      "type": "typography",
+      "filePath": "tokens/components/bignumber.json",
+      "isSource": true
+    }
   },
   "button": {
     "primary": {
@@ -1057,7 +1128,7 @@
       "size": 12,
       "borderRadius": "100000px",
       "bg": {
-        "deactive": "lch(100 0 0 / 0.08)",
+        "deactive": "lch(8.3 5.7 274 / 0.16)",
         "active": "rgb(57.2% 30.5% 78.4%)",
         "hover": "rgb(57.2% 30.5% 78.4%)"
       },
@@ -1070,6 +1141,223 @@
     },
     "content": {
       "gap": 8
+    }
+  },
+  "chip": {
+    "size": {
+      "height": {
+        "assist": 32,
+        "filter": 32,
+        "static": 32
+      },
+      "icon": {
+        "assist": 16,
+        "filter": 16
+      }
+    },
+    "padding": {
+      "assist": "0 16 0 12",
+      "filter": {
+        "checked": "0 16 0 12",
+        "unchecked": "0 16"
+      },
+      "static": "0 16"
+    },
+    "gap": {
+      "assist": 8,
+      "filter": {
+        "checked": 8
+      }
+    },
+    "borderRadius": {
+      "assist": "100000px",
+      "filter": "100000px",
+      "static": "100000px"
+    },
+    "bg": {
+      "assist": {
+        "default": "rgba(255,255,255,0)",
+        "disabled": "rgba(255,255,255,0)",
+        "hover": "rgba(255,255,255,0)",
+        "focus": "rgba(255,255,255,0)",
+        "pressed": "lch(46.1 70 311 / 0.2)",
+        "dragged": "rgb(100% 100% 100%)"
+      },
+      "filter": {
+        "unchecked": {
+          "default": "rgba(255,255,255,0)",
+          "disabled": "rgba(255,255,255,0)",
+          "hover": "rgba(255,255,255,0)",
+          "focus": "rgba(255,255,255,0)",
+          "pressed": "lch(46.1 70 311 / 0.2)",
+          "dragged": "rgb(100% 100% 100%)"
+        },
+        "checked": {
+          "disabled": "rgb(57.2% 30.5% 78.4%)",
+          "hover": "rgb(57.2% 30.5% 78.4%)",
+          "focus": "rgb(57.2% 30.5% 78.4%)",
+          "pressed": "lch(36.8 56 311)",
+          "dragged": "rgb(57.2% 30.5% 78.4%)"
+        }
+      },
+      "static": {
+        "default": "rgba(255,255,255,0)",
+        "disabled": "rgba(255,255,255,0)",
+        "hover": "rgba(255,255,255,0)",
+        "focus": "rgba(255,255,255,0)",
+        "pressed": "lch(46.1 70 311 / 0.2)",
+        "dragged": "rgb(100% 100% 100%)"
+      }
+    },
+    "fg": {
+      "assist": {
+        "default": "rgb(3.76% 4.2% 5.49%)",
+        "disabled": "rgb(3.76% 4.2% 5.49%)",
+        "hover": "rgb(3.76% 4.2% 5.49%)",
+        "focus": "rgb(3.76% 4.2% 5.49%)",
+        "pressed": "rgb(3.76% 4.2% 5.49%)",
+        "dragged": "rgb(3.76% 4.2% 5.49%)"
+      },
+      "filter": {
+        "unchecked": {
+          "default": "rgb(3.76% 4.2% 5.49%)",
+          "disabled": "rgb(3.76% 4.2% 5.49%)",
+          "hover": "rgb(3.76% 4.2% 5.49%)",
+          "focus": "rgb(3.76% 4.2% 5.49%)",
+          "pressed": "rgb(3.76% 4.2% 5.49%)",
+          "dragged": "rgb(3.76% 4.2% 5.49%)"
+        },
+        "checked": {
+          "disabled": "rgb(3.76% 4.2% 5.49%)",
+          "hover": "rgb(3.76% 4.2% 5.49%)",
+          "focus": "rgb(3.76% 4.2% 5.49%)",
+          "pressed": "rgb(3.76% 4.2% 5.49%)",
+          "dragged": "rgb(3.76% 4.2% 5.49%)"
+        }
+      },
+      "static": {
+        "default": "rgb(3.76% 4.2% 5.49%)",
+        "disabled": "rgb(3.76% 4.2% 5.49%)",
+        "hover": "rgb(3.76% 4.2% 5.49%)",
+        "focus": "rgb(3.76% 4.2% 5.49%)",
+        "pressed": "rgb(3.76% 4.2% 5.49%)",
+        "dragged": "rgb(3.76% 4.2% 5.49%)"
+      }
+    },
+    "border": {
+      "assist": {
+        "default": "1px solid rgb(85.2% 86.7% 91.2%)",
+        "disabled": "1px solid rgb(85.2% 86.7% 91.2%)",
+        "hover": "1px solid #8031bf",
+        "focus": "2px solid rgb(85.2% 86.7% 91.2%)",
+        "pressed": "1px solid #8031bf",
+        "dragged": "1px solid #8031bf"
+      },
+      "filter": {
+        "unchecked": {
+          "default": "1px solid rgb(85.2% 86.7% 91.2%)",
+          "disabled": "1px solid rgb(85.2% 86.7% 91.2%)",
+          "hover": "1px solid #8031bf",
+          "focus": "2px solid rgb(85.2% 86.7% 91.2%)",
+          "pressed": "1px solid #8031bf",
+          "dragged": "1px solid rgb(85.2% 86.7% 91.2%)"
+        },
+        "checked": {
+          "disabled": "0 solid #8031bf",
+          "hover": "0 solid #8031bf",
+          "focus": "4px solid #8031bf",
+          "pressed": "0 solid #8031bf",
+          "dragged": "0 solid #8031bf"
+        }
+      },
+      "static": {
+        "default": "1px solid rgb(85.2% 86.7% 91.2%)",
+        "disabled": "1px solid rgb(85.2% 86.7% 91.2%)",
+        "hover": "1px solid #8031bf",
+        "focus": "2px solid rgb(85.2% 86.7% 91.2%)",
+        "pressed": "1px solid #8031bf",
+        "dragged": "1px solid #8031bf"
+      }
+    },
+    "typography": {
+      "assist": "400 14px/1 Inter",
+      "filter": "400 14px/1 Inter",
+      "static": "400 14px/1 Inter"
+    }
+  },
+  "radio": {
+    "content": {
+      "gap": 8
+    },
+    "button": {
+      "size": 20,
+      "bg": {
+        "unchecked": {
+          "default": "rgba(255,255,255,0)",
+          "disabled": "rgba(255,255,255,0)",
+          "hover": "lch(46.1 70 311 / 0.12)"
+        },
+        "checked": {
+          "default": "rgba(255,255,255,0)",
+          "disabled": "rgba(255,255,255,0)",
+          "hover": "lch(46.1 70 311 / 0.12)"
+        }
+      },
+      "label": {
+        "unchecked": {
+          "default": "rgb(3.76% 4.2% 5.49%)",
+          "disabled": "rgb(3.76% 4.2% 5.49%)",
+          "hover": "rgb(3.76% 4.2% 5.49%)"
+        },
+        "checked": {
+          "default": "rgb(3.76% 4.2% 5.49%)",
+          "disabled": "rgb(3.76% 4.2% 5.49%)",
+          "hover": "rgb(3.76% 4.2% 5.49%)"
+        }
+      },
+      "status": {
+        "unchecked": {
+          "default": "rgb(17.9% 20% 26.1%)",
+          "disabled": "rgb(17.9% 20% 26.1%)",
+          "hoverIn": "rgb(17.9% 20% 26.1%)",
+          "hoverOut": "lch(46.1 70 311 / 0.16)"
+        },
+        "checked": {
+          "default": "rgb(57.2% 30.5% 78.4%)",
+          "disabled": "rgb(3.76% 4.2% 5.49%)",
+          "hoverIn": "rgb(57.2% 30.5% 78.4%)",
+          "hoverOut": "lch(46.1 70 311 / 0.16)"
+        }
+      },
+      "border": {
+        "unchecked": {
+          "default": "2px solid rgb(17.9% 20% 26.1%)",
+          "disabled": "2px solid rgb(17.9% 20% 26.1%)",
+          "hoverIn": "2px solid rgb(17.9% 20% 26.1%)",
+          "hoverOut": "4px solid lch(46.1 70 311 / 0.16)"
+        },
+        "checked": {
+          "default": "2px solid rgb(57.2% 30.5% 78.4%)",
+          "disabled": "2px solid rgb(3.76% 4.2% 5.49%)",
+          "hoverIn": "2px solid rgb(57.2% 30.5% 78.4%)",
+          "hoverOut": "4px solid lch(46.1 70 311 / 0.16)"
+        }
+      },
+      "help": {
+        "default": "rgb(26.4% 29.4% 38.4%)"
+      }
+    },
+    "label": {
+      "typography": "400 16px/1 Inter"
+    },
+    "unchecked": {
+      "disabled": "0.5"
+    },
+    "checked": {
+      "disabled": "0.3"
+    },
+    "help": {
+      "size": 16
     }
   },
   "table": {
@@ -1131,5 +1419,22 @@
     },
     "gap": 4,
     "border": "1px solid rgb(85.2% 86.7% 91.2%)"
+  },
+  "tooltip": {
+    "padding": {
+      "content": 12
+    },
+    "typography": {
+      "label": "400 14px/1 Inter"
+    },
+    "bg": {
+      "content": "rgb(8.47% 9.46% 12.4%)"
+    },
+    "fg": {
+      "label": "rgb(100% 100% 100%)"
+    },
+    "borderRadius": {
+      "content": 6
+    }
   }
 }

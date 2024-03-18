@@ -3,7 +3,7 @@ import { ProvideTheme } from '../ProvideTheme';
 import { Typography } from './styles';
 
 export interface Props extends HTMLAttributes<HTMLDivElement> {
-  children: ReactChild;
+  children?: ReactChild;
   variant: 'display' | 'head' | 'body' | 'label';
   level?: 1 | 2 | 3 | 4 | 5 | 6;
   weight?: 'regular' | 'medium' | 'bold';

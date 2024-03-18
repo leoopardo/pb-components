@@ -80,7 +80,9 @@
     "typescript": "^5.4.2"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.1",
     "@tokens-studio/sd-transforms": "^0.14.4",
+    "heroicons-react": "^1.4.1",
     "styled-components": "^6.1.8"
   }
 }
