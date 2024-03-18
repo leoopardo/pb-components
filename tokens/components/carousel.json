@@ -11,8 +11,17 @@
       },
       "bg": {
         "deactive": {
-          "value": "{theme.fg.surface.upsurface}",
-          "type": "color"
+          "value": "{theme.bg.surface.inverted}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "{modifier.44} ",
+                "space": "lch"
+              }
+            }
+          }
         },
         "active": {
           "value": "{theme.bg.brand.secondary}",

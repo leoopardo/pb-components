@@ -14,6 +14,8 @@
     "components/bignumber",
     "components/table",
     "components/carousel",
-    "components/radio"
+    "components/radio",
+    "components/tooltip",
+    "components/chip"
   ]
 }

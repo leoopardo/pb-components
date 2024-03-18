@@ -214,6 +214,12 @@
             "type": "border"
           }
         }
+      },
+      "help": {
+        "default": {
+          "value": "{theme.fg.surface.muted}",
+          "type": "color"
+        }
       }
     },
     "label": {
@@ -232,6 +238,12 @@
       "disabled": {
         "value": "{opacity.30}",
         "type": "opacity"
+      }
+    },
+    "help": {
+      "size": {
+        "value": "{size.xs2}",
+        "type": "sizing"
       }
     }
   }

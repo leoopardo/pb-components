@@ -189,6 +189,10 @@
               }
             }
           }
+        },
+        "inverted": {
+          "value": "{color.neutral.50}",
+          "type": "color"
         }
       },
       "brand": {

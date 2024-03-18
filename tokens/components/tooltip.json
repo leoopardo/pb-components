@@ -1,0 +1,34 @@
+{
+  "tooltip": {
+    "padding": {
+      "content": {
+        "value": "{padding.sm}",
+        "type": "spacing"
+      }
+    },
+    "typography": {
+      "label": {
+        "value": "{typography.desktop.regular.label-md}",
+        "type": "typography"
+      }
+    },
+    "bg": {
+      "content": {
+        "value": "{theme.bg.surface.inverted}",
+        "type": "color"
+      }
+    },
+    "fg": {
+      "label": {
+        "value": "{theme.fg.surface.inverted}",
+        "type": "color"
+      }
+    },
+    "borderRadius": {
+      "content": {
+        "value": "{border-radius.md}",
+        "type": "borderRadius"
+      }
+    }
+  }
+}
