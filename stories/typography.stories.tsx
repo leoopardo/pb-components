@@ -1,6 +1,6 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
-import { Props, Text } from '../src/Typography/Text';
+import { TextProps, Text } from '../src/Typography/Text';
 import { ThemeProvider } from '../src/ThemeProvider';
 
 const meta: Meta = {
@@ -32,7 +32,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: StoryFn<Props> = args => <Text {...args}  />;
+const Template: StoryFn<TextProps> = args => <Text {...args}  />;
 
 // By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
 // https://storybook.js.org/docs/react/workflows/unit-testing

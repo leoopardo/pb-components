@@ -1,7 +1,7 @@
 import React, { CSSProperties, FC, HTMLAttributes, SVGProps } from 'react';
 import * as Icons from '@heroicons/react/24/outline';
 
-export interface Props extends HTMLAttributes<HTMLDivElement> {
+export interface IconProps extends HTMLAttributes<HTMLDivElement> {
   name:
     'AcademicCapIcon'
     | 'AdjustmentsHorizontalIcon'
@@ -303,7 +303,7 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
   size?: 'small' | 'medium' | 'large';
 }
 
-export const Icon: FC<Props> = ({ name, style, size, ...rest }) => {
+export const Icon: FC<IconProps> = ({ name, style, size, ...rest }) => {
   const IconComponent = Icons[name];
 
   // Filtrar propriedades de evento incompatíveis

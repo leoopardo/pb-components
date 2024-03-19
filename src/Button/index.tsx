@@ -3,7 +3,7 @@ import { ProvideTheme } from '../ProvideTheme';
 import { ButtonFilled, ButtonOutlined } from './styles';
 import { Text } from '../Typography/Text';
 
-export interface Props extends HTMLAttributes<HTMLDivElement> {
+export interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactChild;
   style?: CSSProperties;
   variant: 'filled' | 'outlined';
@@ -13,7 +13,7 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
   disabled?: boolean;
 }
 
-export const Button: FC<Props> = ({
+export const Button: FC<ButtonProps> = ({
   children,
   variant,
   style,
