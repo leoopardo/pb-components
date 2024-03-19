@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const SpinnerComponent = styled.div<{
   size?: 'small' | 'medium' | 'large';
 }>(({ theme, size }) => ({
-  border: `4px solid rgba(0, 0, 0, 0.1)`,
-  borderTop: `4px solid ${theme.button.primary.outline.label.disabled}`,
+  border: `2.5px solid rgba(0, 0, 0, 0.1)`,
+  borderTop: `2.5px solid ${theme.button.primary.outline.label.disabled}`,
   borderRadius: `50%`,
   width: size === 'small' ? '12px' : size === 'medium' ? '14px' : '18px', // Set the width based on the size prop
   height: size === 'small' ? '12px' : size === 'medium' ? '14px' : '18px',

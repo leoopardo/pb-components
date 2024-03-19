@@ -36,11 +36,12 @@ export const Button: FC<ButtonProps> = ({
           loading={loading}
         >
           {icon && iconPosition === 'left' && !loading && icon}
+          {loading && iconPosition === 'left' && <Spinner size='small'/>}
           <Text variant="label" level={1} style={{ color: style?.color }}>
             {children}
           </Text>
           {icon && iconPosition !== 'left' && !loading && icon}
-          {loading && <Spinner size='small'/>}
+          {loading && iconPosition !== 'left' && <Spinner size='small'/>}
         </ButtonFilled>
       )}
       {variant === 'outlined' && (
@@ -52,11 +53,12 @@ export const Button: FC<ButtonProps> = ({
           loading={loading}
         >
           {icon && iconPosition === 'left' && !loading && icon}
+          {loading && iconPosition === 'left' && <Spinner size='small'/>}
           <Text variant="label" level={1}>
             {children}
           </Text>
-          {icon && iconPosition !== 'left' && !loading &&  icon}
-          {loading && <Spinner size='small'/>}
+          {icon && iconPosition !== 'left' && !loading && icon}
+          {loading && iconPosition !== 'left' && <Spinner size='small'/>}
         </ButtonOutlined>
       )}
     </ProvideTheme>
