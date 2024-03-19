@@ -4,13 +4,16 @@ export const ButtonFilled = styled.button<{
   size?: 'medium' | 'large';
   iconPosition?: 'left' | 'right';
   disabled?: boolean;
-}>(({ theme, size, iconPosition, disabled }) => ({
-  backgroundColor: disabled
-    ? theme.button.primary.filled.bg.disabled
-    : theme.button.primary.filled.bg.default,
-  color: disabled
-    ? theme.button.primary.filled.label.disabled
-    : theme.button.primary.filled.label.default,
+  loading?: boolean;
+}>(({ theme, size, iconPosition, disabled, loading }) => ({
+  backgroundColor:
+    disabled || loading
+      ? theme.button.primary.filled.bg.disabled
+      : theme.button.primary.filled.bg.default,
+  color:
+    disabled || loading
+      ? theme.button.primary.filled.label.disabled
+      : theme.button.primary.filled.label.default,
   padding:
     size === 'large'
       ? theme.button.primary.padding.large[`icon-${iconPosition ?? 'off'}`]
@@ -30,27 +33,32 @@ export const ButtonFilled = styled.button<{
   transition: `background-color, color ${theme.animation.duration['200']}, outline ${theme.animation.duration['50']}`,
   transitionTimingFunction: theme.animation.transition['ease-in'],
   '&:hover': {
-    backgroundColor: disabled
-      ? theme.button.primary.filled.bg.disabled
-      : theme.button.primary.filled.bg.hover,
-    color: disabled
-      ? theme.button.primary.filled.label.disabled
-      : theme.button.primary.filled.label.hover,
-    cursor: disabled ? 'no-drop' : 'pointer',
+    backgroundColor:
+      disabled || loading
+        ? theme.button.primary.filled.bg.disabled
+        : theme.button.primary.filled.bg.hover,
+    color:
+      disabled || loading
+        ? theme.button.primary.filled.label.disabled
+        : theme.button.primary.filled.label.hover,
+    cursor: disabled || loading ? 'no-drop' : 'pointer',
   },
   '&:active': {
-    backgroundColor: disabled
-      ? theme.button.primary.filled.bg.disabled
-      : theme.button.primary.filled.bg.active,
-    color: disabled
-      ? theme.button.primary.filled.label.disabled
-      : theme.button.primary.filled.label.active,
+    backgroundColor:
+      disabled || loading
+        ? theme.button.primary.filled.bg.disabled
+        : theme.button.primary.filled.bg.active,
+    color:
+      disabled || loading
+        ? theme.button.primary.filled.label.disabled
+        : theme.button.primary.filled.label.active,
   },
   '&:focus': {
-    outline: theme.button.border.primary.filled.focus,
-    color: disabled
-      ? theme.button.primary.filled.label.disabled
-      : theme.button.primary.filled.label.focus,
+    outline: !disabled && !loading && theme.button.border.primary.filled.focus,
+    color:
+      disabled || loading
+        ? theme.button.primary.filled.label.disabled
+        : theme.button.primary.filled.label.focus,
   },
 }));
 
@@ -58,16 +66,20 @@ export const ButtonOutlined = styled.button<{
   size?: 'medium' | 'large';
   iconPosition?: 'left' | 'right';
   disabled?: boolean;
-}>(({ theme, size, iconPosition, disabled }) => ({
-  backgroundColor: disabled
-    ? theme.button.primary.outline.bg.disabled
-    : theme.button.primary.outline.bg.default,
-  outline: disabled
-    ? theme.button.border.primary.outline.disabled
-    : theme.button.border.primary.outline.default,
-  color: disabled
-    ? theme.button.primary.outline.label.disabled
-    : theme.button.primary.outline.label.default,
+  loading?: boolean;
+}>(({ theme, size, iconPosition, disabled, loading }) => ({
+  backgroundColor:
+    disabled || loading
+      ? theme.button.primary.outline.bg.disabled
+      : theme.button.primary.outline.bg.default,
+  outline:
+    disabled || loading
+      ? theme.button.border.primary.outline.disabled
+      : theme.button.border.primary.outline.default,
+  color:
+    disabled || loading
+      ? theme.button.primary.outline.label.disabled
+      : theme.button.primary.outline.label.default,
   padding:
     size === 'large'
       ? theme.button.primary.padding.large[`icon-${iconPosition ?? 'off'}`]
@@ -87,24 +99,29 @@ export const ButtonOutlined = styled.button<{
   transition: `background-color ${theme.animation.duration['200']}, outline ${theme.animation.duration['200']}, color ${theme.animation.duration['200']}`,
   transitionTimingFunction: theme.animation.transition['ease-in'],
   '&:hover': {
-    backgroundColor: disabled
-      ? theme.button.primary.outline.bg.disabled
-      : theme.button.primary.outline.bg.hover,
+    backgroundColor:
+      disabled || loading
+        ? theme.button.primary.outline.bg.disabled
+        : theme.button.primary.outline.bg.hover,
     color: disabled
       ? theme.button.primary.outline.label.disabled
       : theme.button.primary.outline.label.hover,
-    cursor: disabled ? 'no-drop' : 'pointer',
+    cursor: disabled || loading ? 'no-drop' : 'pointer',
   },
   '&:active': {
-    backgroundColor: disabled
-      ? theme.button.primary.outline.bg.disabled
-      : theme.button.primary.outline.bg.active,
-    color: disabled
-      ? theme.button.primary.outline.label.disabled
-      : theme.button.primary.outline.label.active,
+    backgroundColor:
+      disabled || loading
+        ? theme.button.primary.outline.bg.disabled
+        : theme.button.primary.outline.bg.active,
+    color:
+      disabled || loading
+        ? theme.button.primary.outline.label.disabled
+        : theme.button.primary.outline.label.active,
   },
   '&:focus': {
-    outline: theme.button.border.primary.outline.focus,
-    color: theme.button.primary.outline.label.focus,
+    outline: !disabled && !loading && theme.button.border.primary.outline.focus,
+    color: disabled || loading
+    ? theme.button.primary.outline.label.disabled
+    : theme.button.primary.outline.label.focus,
   },
 }));

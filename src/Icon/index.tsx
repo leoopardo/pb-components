@@ -1,5 +1,5 @@
-import React, { CSSProperties, FC, HTMLAttributes, SVGProps } from 'react';
 import * as Icons from '@heroicons/react/24/outline';
+import React, { CSSProperties, FC, HTMLAttributes } from 'react';
 
 export interface IconProps extends HTMLAttributes<HTMLDivElement> {
   name:

@@ -1,9 +1,9 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { useTheme } from '../ThemeProvider';
-import light from '../../styles/json/light.json';
-import dark from '../../styles/json/dark.json';
-import { GlobalStyle } from '../../globals-styles.ts';
+import light from '../styles/json/light.json';
+import dark from '../styles/json/dark.json';
+import { GlobalStyle } from '../globals-styles';
 
 export const ProvideTheme = ({ children }: any) => {
   const { theme } = useTheme();

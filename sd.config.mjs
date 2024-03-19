@@ -16,20 +16,19 @@ function getStyleDictionaryConfig(theme) {
       'tokens/components/*.json',
     ],
     platforms: {
-      css: {
-        transformGroup: 'tokens-studio',
-        buildPath: `styles/`,
-        files: [
-          {
-            destination: `${theme}.css`,
-            format: 'css/variables',
-          },
-        ],
-      },
+      // css: {
+      //   transformGroup: 'tokens-studio',
+      //   buildPath: `src/styles/`,
+      //   files: [
+      //     {
+      //       destination: `${theme}.css`,
+      //       format: 'css/variables',
+      //     },
+      //   ],
+      // },
       json: {
-        
         transformGroup: 'tokens-studio',
-        buildPath: `styles/json/`,
+        buildPath: `src/styles/json/`,
         files: [
           {
             destination: `${theme}.json`,

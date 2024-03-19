@@ -1,6 +1,4 @@
 import React, { createContext, useContext, FC } from 'react';
-import "../build/css/_variables.css"
-
 // Defina a forma do seu tema
 export interface Theme {
   theme: 'light' | 'dark';
