@@ -318,7 +318,7 @@ export const Icon: FC<Props> = ({ name, style, size, ...rest }) => {
     <IconComponent
       style={{
         ...style,
-        width: size === 'small' ? '18px' : size === 'medium' ? '20px' : '24px',
+        width: size === 'small' ? '16px' : size === 'medium' ? '18px' : '20px',
       }}
       {...filteredProps}
     />

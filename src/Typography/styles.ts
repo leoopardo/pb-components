@@ -49,7 +49,6 @@ export const Typography = styled.h1<{
         : theme['font-weight'].title.bold
       : variant === 'label' && theme['font-weight'].label,
   letterSpacing: theme['letter-spacing'].h1,
-  color: theme.theme.fg.surface.default,
   lineHeight:
     variant === 'display' ? theme['line-height'].xs : theme['line-height'].sm,
 }));

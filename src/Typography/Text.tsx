@@ -8,6 +8,7 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
   level?: 1 | 2 | 3 | 4 | 5 | 6;
   weight?: 'regular' | 'medium' | 'bold';
   style?: CSSProperties;
+  className?: string;
 }
 
 export const Text: FC<Props> = ({
@@ -19,7 +20,7 @@ export const Text: FC<Props> = ({
 }) => {
   return (
     <ProvideTheme>
-      <Typography variant={variant} level={level} weight={weight} style={style}>
+      <Typography variant={variant} level={level} weight={weight} style={{...style}}>
         {children}
       </Typography>
     </ProvideTheme>

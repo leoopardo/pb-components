@@ -20,9 +20,10 @@ const meta: Meta = {
   args: {
     children: 'Button',
     variant: 'filled',
-    style: {width: '200px'},
-    icon: <Icon name='ArrowSmallRightIcon'/>,
-    iconPosition: 'right'
+    style: {width: '150px'},
+    icon: <Icon name='ArrowSmallRightIcon' style={{}}/>,
+    iconPosition: 'right',
+    size: "medium"
   },
   decorators: [
     Story => (

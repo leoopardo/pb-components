@@ -10,6 +10,7 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
   size?: 'medium' | 'large';
   icon?: ReactChild;
   iconPosition?: 'left' | 'right';
+  disabled?: boolean;
 }
 
 export const Button: FC<Props> = ({
@@ -19,21 +20,36 @@ export const Button: FC<Props> = ({
   size,
   icon,
   iconPosition,
+  disabled,
 }) => {
   return (
     <ProvideTheme>
       {variant === 'filled' && (
-        <ButtonFilled style={style} size={size} iconPosition={iconPosition}>
+        <ButtonFilled
+          style={style}
+          size={size}
+          iconPosition={iconPosition}
+          disabled={disabled}
+        >
           {icon && iconPosition === 'left' && icon}
-          <Text variant="label" level={1}>
+          <Text variant="label" level={1} style={{ color: style?.color }}>
             {children}
           </Text>
           {icon && iconPosition !== 'left' && icon}
         </ButtonFilled>
       )}
       {variant === 'outlined' && (
-        <ButtonOutlined>
-          <h1>{children}</h1>
+        <ButtonOutlined
+          style={style}
+          size={size}
+          iconPosition={iconPosition}
+          disabled={disabled}
+        >
+          {icon && iconPosition === 'left' && icon}
+          <Text variant="label" level={1}>
+            {children}
+          </Text>
+          {icon && iconPosition !== 'left' && icon}
         </ButtonOutlined>
       )}
     </ProvideTheme>
