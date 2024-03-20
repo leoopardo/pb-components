@@ -81,7 +81,7 @@ export const Button: FC<ButtonProps> = ({
           iconPosition={iconPosition}
           disabled={disabled}
           loading={loading}
-          onClick={e => {
+          onClick={(e: any) => {
             setIsCollapsed(!isCollapsed);
             onClick && onClick(e);
           }}
@@ -96,7 +96,7 @@ export const Button: FC<ButtonProps> = ({
             className={'rotate-icon'}
             style={{
               transition: 'transform 0.3s ease', // adiciona uma transição suave
-              animationName: isCollapsed ? 'rotate' : 'unrotate'
+              animationName: isCollapsed ? 'rotate' : 'unrotate',
             }}
           />
         </ButtonSecondary>
