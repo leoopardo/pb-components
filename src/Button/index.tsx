@@ -6,11 +6,15 @@ import React, {
   useState,
 } from 'react';
 import { ProvideTheme } from '../ProvideTheme';
-import { ButtonFilled, ButtonOutlined, ButtonSecondary } from './styles';
+import {
+  ButtonFilled,
+  ButtonOutlined,
+  ButtonSecondary,
+  RotateAnimationDiv,
+} from './styles';
 import { Text } from '../Typography/Text';
 import { Spinner } from '../Spinner';
 import { Icon } from '../Icon';
-import './styles.css';
 
 export interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactChild;
@@ -91,14 +95,9 @@ export const Button: FC<ButtonProps> = ({
           <Text variant="label" level={1}>
             {children}
           </Text>
-          <Icon
-            name="ChevronDownIcon"
-            className={'rotate-icon'}
-            style={{
-              transition: 'transform 0.3s ease', // adiciona uma transição suave
-              animationName: isCollapsed ? 'rotate' : 'unrotate',
-            }}
-          />
+          <RotateAnimationDiv collapsed={isCollapsed}>
+            <Icon name="ChevronDownIcon" />
+          </RotateAnimationDiv>
         </ButtonSecondary>
       )}
     </ProvideTheme>

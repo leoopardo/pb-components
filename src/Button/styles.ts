@@ -32,7 +32,7 @@ export const ButtonFilled = styled.button<{
   border: 'none',
   transition: `background-color, color ${theme.animation.duration['200']}, outline ${theme.animation.duration['50']}`,
   transitionTimingFunction: theme.animation.transition['ease-in'],
-  textTransform: "capitalize",
+  textTransform: 'capitalize',
   '&:hover': {
     backgroundColor:
       disabled || loading
@@ -99,7 +99,7 @@ export const ButtonOutlined = styled.button<{
   border: 'none',
   transition: `background-color ${theme.animation.duration['200']}, outline ${theme.animation.duration['200']}, color ${theme.animation.duration['200']}`,
   transitionTimingFunction: theme.animation.transition['ease-in'],
-  textTransform: "capitalize",
+  textTransform: 'capitalize',
   '&:hover': {
     backgroundColor:
       disabled || loading
@@ -160,7 +160,7 @@ export const ButtonSecondary = styled.button<{
   border: 'none',
   transition: `background-color ${theme.animation.duration['200']}, outline ${theme.animation.duration['200']}, color ${theme.animation.duration['200']}`,
   transitionTimingFunction: theme.animation.transition['ease-in'],
-  textTransform: "capitalize",
+  textTransform: 'capitalize',
   '&:hover': {
     backgroundColor:
       disabled || loading
@@ -182,11 +182,36 @@ export const ButtonSecondary = styled.button<{
         : theme.button.secondary.filled.label.active,
   },
   '&:focus': {
-    outline:
-      !disabled && !loading && theme.button.border.secondary.focus,
+    outline: !disabled && !loading && theme.button.border.secondary.focus,
     color:
       disabled || loading
         ? theme.button.secondary.filled.label.disabled
         : theme.button.secondary.filled.label.focus,
   },
 }));
+
+export const RotateAnimationDiv = styled.div<{ collapsed: boolean }>(
+  ({ collapsed }) => ({
+    '@keyframes rotate': {
+      from: {
+        transform: 'rotateX(0deg)',
+      },
+      to: {
+        transform: 'rotateX(-180deg)',
+      },
+    },
+    '@keyframes unrotate': {
+      from: {
+        transform: 'rotateX(-180deg)',
+      },
+      to: {
+        transform: 'rotateX(0deg)',
+      },
+    },
+
+    animation: 'rotate 0.3s ease-in-out forwards',
+    animationName: collapsed ? 'rotate' : 'unrotate',
+    
+    transition: 'transform 0.3s ease'
+  })
+);
