@@ -1,0 +1,1 @@
+@keyframes rotate{0%{transform:rotateX(0)}to{transform:rotateX(-180deg)}}@keyframes unrotate{0%{transform:rotateX(-180deg)}to{transform:rotateX(0)}}.rotate-icon{animation:rotate .3s ease-in-out forwards}
