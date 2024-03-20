@@ -10,7 +10,7 @@ import { ButtonFilled, ButtonOutlined, ButtonSecondary } from './styles';
 import { Text } from '../Typography/Text';
 import { Spinner } from '../Spinner';
 import { Icon } from '../Icon';
-import './styles.css';
+import './styles.sass';
 
 export interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactChild;
