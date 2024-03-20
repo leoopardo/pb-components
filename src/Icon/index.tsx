@@ -3,7 +3,7 @@ import React, { CSSProperties, FC, HTMLAttributes } from 'react';
 
 export interface IconProps extends HTMLAttributes<HTMLDivElement> {
   name:
-    'AcademicCapIcon'
+    | 'AcademicCapIcon'
     | 'AdjustmentsHorizontalIcon'
     | 'AdjustmentsVerticalIcon'
     | 'ArchiveBoxArrowDownIcon'
@@ -301,9 +301,16 @@ export interface IconProps extends HTMLAttributes<HTMLDivElement> {
     | 'XMarkIcon';
   style?: CSSProperties;
   size?: 'small' | 'medium' | 'large';
+  className?: string;
 }
 
-export const Icon: FC<IconProps> = ({ name, style, size, ...rest }) => {
+export const Icon: FC<IconProps> = ({
+  name,
+  style,
+  size,
+  className,
+  ...rest
+}) => {
   const IconComponent = Icons[name];
 
   // Filtrar propriedades de evento incompatíveis
@@ -316,6 +323,7 @@ export const Icon: FC<IconProps> = ({ name, style, size, ...rest }) => {
 
   return (
     <IconComponent
+      className={className}
       style={{
         ...style,
         width: size === 'small' ? '16px' : size === 'medium' ? '18px' : '20px',

@@ -1,0 +1,21 @@
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(-180deg);
+  }
+}
+
+@keyframes unrotate {
+  from {
+    transform: rotateX(-180deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+.rotate-icon {
+  animation: rotate 0.3s ease-in-out forwards;
+}

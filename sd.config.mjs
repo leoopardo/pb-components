@@ -16,16 +16,16 @@ function getStyleDictionaryConfig(theme) {
       'tokens/components/*.json',
     ],
     platforms: {
-      // css: {
-      //   transformGroup: 'tokens-studio',
-      //   buildPath: `src/styles/`,
-      //   files: [
-      //     {
-      //       destination: `${theme}.css`,
-      //       format: 'css/variables',
-      //     },
-      //   ],
-      // },
+      css: {
+        transformGroup: 'tokens-studio',
+        buildPath: `src/styles/`,
+        files: [
+          {
+            destination: `${theme}.css`,
+            format: 'css/variables',
+          },
+        ],
+      },
       json: {
         transformGroup: 'tokens-studio',
         buildPath: `src/styles/json/`,

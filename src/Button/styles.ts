@@ -32,6 +32,7 @@ export const ButtonFilled = styled.button<{
   border: 'none',
   transition: `background-color, color ${theme.animation.duration['200']}, outline ${theme.animation.duration['50']}`,
   transitionTimingFunction: theme.animation.transition['ease-in'],
+  textTransform: "capitalize",
   '&:hover': {
     backgroundColor:
       disabled || loading
@@ -98,6 +99,7 @@ export const ButtonOutlined = styled.button<{
   border: 'none',
   transition: `background-color ${theme.animation.duration['200']}, outline ${theme.animation.duration['200']}, color ${theme.animation.duration['200']}`,
   transitionTimingFunction: theme.animation.transition['ease-in'],
+  textTransform: "capitalize",
   '&:hover': {
     backgroundColor:
       disabled || loading
@@ -120,8 +122,71 @@ export const ButtonOutlined = styled.button<{
   },
   '&:focus': {
     outline: !disabled && !loading && theme.button.border.primary.outline.focus,
-    color: disabled || loading
-    ? theme.button.primary.outline.label.disabled
-    : theme.button.primary.outline.label.focus,
+    color:
+      disabled || loading
+        ? theme.button.primary.outline.label.disabled
+        : theme.button.primary.outline.label.focus,
+  },
+}));
+
+export const ButtonSecondary = styled.button<{
+  size?: 'medium' | 'large';
+  iconPosition?: 'left' | 'right';
+  disabled?: boolean;
+  loading?: boolean;
+}>(({ theme, iconPosition, disabled, loading }) => ({
+  backgroundColor:
+    disabled || loading
+      ? theme.button.secondary.filled.bg.disabled
+      : theme.button.secondary.filled.bg.default,
+  outline:
+    disabled || loading
+      ? theme.button.border.secondary.disabled
+      : theme.button.border.secondary.default,
+  color:
+    disabled || loading
+      ? theme.button.secondary.filled.label.disabled
+      : theme.button.secondary.filled.label.default,
+  padding:
+    theme.button.secondary.padding.medium[`icon-${iconPosition ? 'on' : 'off'}`]
+      .padding,
+  gap:
+    theme.button.secondary.padding.medium[`icon-${iconPosition ? 'on' : 'off'}`]
+      .gap,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  borderRadius: theme.button['border-radius'],
+  border: 'none',
+  transition: `background-color ${theme.animation.duration['200']}, outline ${theme.animation.duration['200']}, color ${theme.animation.duration['200']}`,
+  transitionTimingFunction: theme.animation.transition['ease-in'],
+  textTransform: "capitalize",
+  '&:hover': {
+    backgroundColor:
+      disabled || loading
+        ? theme.button.secondary.filled.bg.disabled
+        : theme.button.secondary.filled.bg.hover,
+    color: disabled
+      ? theme.button.secondary.filled.label.disabled
+      : theme.button.secondary.filled.label.hover,
+    cursor: disabled || loading ? 'no-drop' : 'pointer',
+  },
+  '&:active': {
+    backgroundColor:
+      disabled || loading
+        ? theme.button.secondary.filled.bg.disabled
+        : theme.button.secondary.filled.bg.active,
+    color:
+      disabled || loading
+        ? theme.button.secondary.filled.label.disabled
+        : theme.button.secondary.filled.label.active,
+  },
+  '&:focus': {
+    outline:
+      !disabled && !loading && theme.button.border.secondary.focus,
+    color:
+      disabled || loading
+        ? theme.button.secondary.filled.label.disabled
+        : theme.button.secondary.filled.label.focus,
   },
 }));
