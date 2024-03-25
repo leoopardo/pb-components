@@ -16,10 +16,11 @@ export const Text: FC<TextProps> = ({
   variant,
   level,
   weight,
+  style,
 }) => {
   return (
     <ProvideTheme>
-      <Typography variant={variant} level={level} weight={weight} >
+      <Typography variant={variant} level={level} weight={weight} style={{...style}}>
         {children}
       </Typography>
     </ProvideTheme>
