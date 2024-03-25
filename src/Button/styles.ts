@@ -211,7 +211,6 @@ export const RotateAnimationDiv = styled.div<{ collapsed: boolean }>(
 
     animation: 'rotate 0.3s ease-in-out forwards',
     animationName: collapsed ? 'rotate' : 'unrotate',
-    
     transition: 'transform 0.3s ease'
   })
 );

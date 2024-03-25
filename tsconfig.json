@@ -1,6 +1,6 @@
 {
   // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
-  "include": ["src", "types", "stories/Card.stories.tsx"],
+  "include": ["src", "types", "*.d.ts", "*.ts", "*.tsx", "*.css", "*.ttf"],
   "compilerOptions": {
     "module": "esnext",
     "lib": ["dom", "esnext"],
