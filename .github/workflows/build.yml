@@ -24,6 +24,12 @@ jobs:
     - name: Build Storybook
       run: npm run build-storybook
 
+    - name: Set git user
+      run: |
+        git config --global user.name "Your Name"
+        git config --global user.email "you@example.com"
+ 
+
     - name: npm patch
       run: npm run patch
 
