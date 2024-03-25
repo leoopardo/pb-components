@@ -71,7 +71,7 @@ export const Button: FC<ButtonProps> = ({
         >
           {icon && iconPosition === 'left' && !loading && icon}
           {loading && iconPosition === 'left' && <Spinner size="small" />}
-          <Text variant="label" level={1}>
+          <Text variant="label" level={1} inherit>
             {children}
           </Text>
           {icon && iconPosition !== 'left' && !loading && icon}

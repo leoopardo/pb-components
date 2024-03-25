@@ -9,6 +9,7 @@ export interface TextProps extends HTMLAttributes<HTMLDivElement> {
   weight?: 'regular' | 'medium' | 'bold';
   style?: CSSProperties;
   className?: string;
+  inherit?: boolean;
 }
 
 export const Text: FC<TextProps> = ({
@@ -17,10 +18,11 @@ export const Text: FC<TextProps> = ({
   level,
   weight,
   style,
+  inherit
 }) => {
   return (
     <ProvideTheme>
-      <Typography variant={variant} level={level} weight={weight} style={{...style}}>
+      <Typography variant={variant} level={level} weight={weight} style={{...style}} inherit={inherit}>
         {children}
       </Typography>
     </ProvideTheme>
