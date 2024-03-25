@@ -29,6 +29,9 @@ jobs:
           git config --global user.name "leoopardo"
           git config --global user.email "leo.san9@hotmail.com"
 
+      - name: npm patch
+        run: npm run patch
+
       - name: npm publish
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc

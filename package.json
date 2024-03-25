@@ -1,5 +1,5 @@
 {
-  "version": "0.1.10",
+  "version": "0.1.11",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -28,7 +28,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run build && npm version patch -m 'Increment version [skip ci]' && git add ."
+      "pre-commit": "tsdx build npm version patch"
     }
   },
   "prettier": {
