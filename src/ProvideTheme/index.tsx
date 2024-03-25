@@ -8,7 +8,7 @@ import { GlobalStyle } from '../globals-styles';
 export const ProvideTheme = ({ children }: any) => {
   const { theme } = useTheme();
   return (
-    <ThemeProvider theme={theme === 'dark' ? dark : (light as typeof dark)}>
+    <ThemeProvider theme={light}>
       <GlobalStyle />
       {children}
     </ThemeProvider>
