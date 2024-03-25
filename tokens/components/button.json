@@ -237,6 +237,12 @@
             "type": "sizing"
           }
         }
+      },
+      "typography": {
+        "label": {
+          "value": "{typography.desktop.medium.label-lg}",
+          "type": "typography"
+        }
       }
     },
     "secondary": {
@@ -402,17 +408,17 @@
             }
           }
         }
+      },
+      "typography": {
+        "label": {
+          "value": "{typography.desktop.medium.label-md}",
+          "type": "typography"
+        }
       }
     },
     "border-radius": {
       "value": "{border-radius.lg}",
       "type": "borderRadius"
-    },
-    "typography": {
-      "label": {
-        "value": "{typography.desktop.medium.label-lg}",
-        "type": "typography"
-      }
     },
     "border-width": {
       "primary": {

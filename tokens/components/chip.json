@@ -147,15 +147,42 @@
         "checked": {
           "disabled": {
             "value": "{theme.bg.brand.secondary}",
-            "type": "color"
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{modifier.43} ",
+                  "space": "lch"
+                }
+              }
+            }
           },
           "hover": {
             "value": "{theme.bg.brand.secondary}",
-            "type": "color"
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{modifier.43} ",
+                  "space": "lch"
+                }
+              }
+            }
           },
           "focus": {
             "value": "{theme.bg.brand.secondary}",
-            "type": "color"
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{modifier.43} ",
+                  "space": "lch"
+                }
+              }
+            }
           },
           "pressed": {
             "value": "{theme.bg.brand.secondary}",
@@ -164,7 +191,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "darken",
-                  "value": "{modifier.42} ",
+                  "value": "{modifier.33} ",
                   "space": "lch"
                 }
               }
@@ -172,7 +199,16 @@
           },
           "dragged": {
             "value": "{theme.bg.brand.secondary}",
-            "type": "color"
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{modifier.43} ",
+                  "space": "lch"
+                }
+              }
+            }
           }
         }
       },
@@ -232,8 +268,7 @@
         },
         "pressed": {
           "value": "{theme.fg.surface.default}",
-          "type": "color",
-          "$extensions": {}
+          "type": "color"
         },
         "dragged": {
           "value": "{theme.fg.surface.default}",
@@ -260,8 +295,7 @@
           },
           "pressed": {
             "value": "{theme.fg.surface.default}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           },
           "dragged": {
             "value": "{theme.fg.surface.default}",
@@ -283,8 +317,7 @@
           },
           "pressed": {
             "value": "{theme.fg.surface.default}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           },
           "dragged": {
             "value": "{theme.fg.surface.default}",
@@ -311,8 +344,7 @@
         },
         "pressed": {
           "value": "{theme.fg.surface.default}",
-          "type": "color",
-          "$extensions": {}
+          "type": "color"
         },
         "dragged": {
           "value": "{theme.fg.surface.default}",
@@ -528,6 +560,16 @@
       "static": {
         "value": "{typography.desktop.regular.label-md}",
         "type": "typography"
+      }
+    },
+    "opacity": {
+      "disabled": {
+        "value": "{opacity.50}",
+        "type": "opacity"
+      },
+      "dragged": {
+        "value": "{opacity.70}",
+        "type": "opacity"
       }
     }
   }
