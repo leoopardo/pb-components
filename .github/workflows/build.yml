@@ -18,8 +18,11 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Run sd.config.mjs
+      run: node sd.config.mjs
+
     - name: Build Storybook
       run: npm run build-storybook
 
-    - name: Run sd.config.mjs
-      run: node sd.config.mjs
+    - name: npm publish
+      run: npm run deploy
