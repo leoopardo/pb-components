@@ -28,7 +28,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx build npm version patch"
+      "pre-commit": "npm run build && npm version patch -m 'Increment version [skip ci]' && git add ."
     }
   },
   "prettier": {
