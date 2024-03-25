@@ -29,6 +29,9 @@ jobs:
     - name: Check git status
       run: git status
 
+    - name: Checkout a branch
+      run: git checkout main
+
     - name: Build Storybook
       run: npm run build-storybook
 
