@@ -18,8 +18,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-      - name: Stash changes
-      run: git stash --include-untracked
+    - name: Stash changes
+    run: git stash --include-untracked
 
     # - name: Run sd.config.mjs
     #   run: node sd.config.mjs
