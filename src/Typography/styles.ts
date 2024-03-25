@@ -51,4 +51,5 @@ export const Typography = styled.h1<{
   letterSpacing: theme['letter-spacing'].h1,
   lineHeight:
     variant === 'display' ? theme['line-height'].xs : theme['line-height'].sm,
+    color: theme.theme.fg.surface.default
 }));
