@@ -26,10 +26,9 @@ jobs:
 
     - name: Set git user
       run: |
-        git config --global user.name "Your Name"
-        git config --global user.email "you@example.com"
+        git config --global user.name "leoopardo"
+        git config --global user.email "leo.san9@hotmail.com"
  
-
     - name: npm patch
       run: npm run patch
 
