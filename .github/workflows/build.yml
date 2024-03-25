@@ -34,3 +34,5 @@ jobs:
 
     - name: npm publish
       run: npm run deploy
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
