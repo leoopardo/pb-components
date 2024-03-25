@@ -21,7 +21,7 @@
     "storybook": "storybook dev",
     "build-storybook": "storybook build storybook-static",
     "patch": "npm version patch --force",
-    "deploy": "npm publish"
+    "deploy": "npm publish --always-auth"
   },
   "peerDependencies": {
     "react": ">=16"
