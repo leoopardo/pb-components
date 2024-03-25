@@ -20,7 +20,7 @@
     "analyze": "size-limit --why",
     "storybook": "storybook dev",
     "build-storybook": "storybook build storybook-static",
-    "patch": "npm version patch",
+    "patch": "npm version patch --force",
     "deploy": "npm publish"
   },
   "peerDependencies": {

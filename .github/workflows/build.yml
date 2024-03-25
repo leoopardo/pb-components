@@ -18,19 +18,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Check git status
-      run: git status
-
-    - name: Reset and clean
-      run: |
-        git reset --hard
-        git clean -fd
-
-    - name: Check git status
-      run: git status
-
-    - name: Checkout a branch
-      run: git checkout main
+    # - name: Run sd.config.mjs
+    #   run: node sd.config.mjs
 
     - name: Build Storybook
       run: npm run build-storybook
@@ -38,5 +27,5 @@ jobs:
     - name: npm patch
       run: npm run patch
 
-    - name: npm deploy
+    - name: npm publish
       run: npm run deploy
