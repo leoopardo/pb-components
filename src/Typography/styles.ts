@@ -24,6 +24,11 @@ export const Typography = styled.h1<{
   weight?: 'regular' | 'medium' | 'bold';
   inherit?: boolean;
 }>(({ theme, variant, level, weight, inherit }) => ({
+  marginTop: "1.605px",
+  marginBottom: "1.605px",
+  maxWidth: '80%',
+  overflow: "hidden",
+  textOverflow: "ellipsis",
   fontFamily: ['display', 'head', 'label'].includes(variant)
     ? 'GothamPro'
     : 'Inter',

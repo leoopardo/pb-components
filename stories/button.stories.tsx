@@ -20,22 +20,38 @@ const meta: Meta = {
   args: {
     children: 'Button',
     variant: 'filled',
-    icon: <Icon name='ArrowSmallRightIcon' style={{}}/>,
     iconPosition: 'right',
-    size: "medium"
+    size: 'medium',
+    style: { width: '200px' },
+    icon: <Icon name="PlusCircleIcon" />,
+    buttonList: [
+      {
+        label: 'Detalhes',
+        onClick: () => console.log('teste'),
+        icon: <Icon name="EyeIcon" />,
+      },
+      {
+        label: 'Editar',
+        onClick: () => console.log('teste'),
+        icon: <Icon name="PencilIcon" />,
+      },
+      {
+        label: 'Excluir',
+        onClick: () => console.log('teste'),
+        icon: <Icon name="TrashIcon" />,
+      },
+    ],
   },
   decorators: [
-    Story => (
-      <ThemeProvider theme={{theme: "light"}}>
-          {Story()}
-      </ThemeProvider>
+    (Story) => (
+      <ThemeProvider theme={{ theme: 'light' }}>{Story()}</ThemeProvider>
     ),
   ],
 };
 
 export default meta;
 
-const Template: StoryFn<ButtonProps> = args => <Button {...args}  />;
+const Template: StoryFn<ButtonProps> = (args) => <Button {...args} />;
 
 // By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
 // https://storybook.js.org/docs/react/workflows/unit-testing
