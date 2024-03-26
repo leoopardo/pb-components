@@ -16,19 +16,19 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           fetch-depth: 0  # This fetches all commits
 
-      - name: Check for changes in package.json
+      - name: Check for changes in package.json, package-lock.json, or storybook-static only
         run: |
-          if git diff --quiet HEAD^ HEAD -- package.json; then
-            echo "No changes in package.json"
+          if git diff --quiet HEAD^ HEAD -- package.json package-lock.json 'storybook-static/*'; then
+            echo "No changes in package.json, package-lock.json, or storybook-static"
           else
-            if git diff --quiet HEAD^ HEAD -- ':!package.json'; then
-              echo "Only package.json was changed, aborting"
+            if git diff --quiet HEAD^ HEAD -- ':!package.json' ':!package-lock.json' ':!storybook-static/*'; then
+              echo "Only package.json, package-lock.json, or storybook-static were changed, aborting"
               exit 1
             else
-              echo "Changes in files other than package.json"
+              echo "Changes in files other than package.json, package-lock.json, or storybook-static"
             fi
           fi
-          
+
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
