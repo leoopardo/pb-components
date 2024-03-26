@@ -18,7 +18,7 @@ jobs:
 
       - name: Check for changes in package.json
         run: |
-          git diff --quiet HEAD^ HEAD -- package.json && echo "No changes in package.json" || exit 0
+          git diff --quiet HEAD^ HEAD -- package.json && echo "No changes in package.json" || exit 1
 
       - name: Use Node.js
         uses: actions/setup-node@v2
