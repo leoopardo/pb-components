@@ -1,12 +1,11 @@
 name: Build
 
 on:
-push:
-  branches:
-    - main
-  paths-ignore:
-    - 'package.json'
-  types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'package.json'
 
 jobs:
   build:
