@@ -37,21 +37,16 @@ jobs:
           git config --global user.name "leoopardo"
           git config --global user.email "leo.san9@hotmail.com"
 
-      - name: Check commit message for [skip ci]
-        run: |
-          if git log --format=%B -n 1 HEAD | grep -q "\[skip ci\]"; then
-            echo "Commit message contains [skip ci]. Skipping further steps."
-            exit 78 # Exit code 78 skips the workflow run
-          fi
+      - name: Check if commit is from workflow
+        id: check_commit
+        run: echo ::set-output name=is_workflow_commit::$(git log -1 --pretty=%B | grep -c "workflow")
 
-      - name: npm patch
+      - name: Commit changes if not from workflow
+        if: steps.check_commit.outputs.is_workflow_commit == '0'
         run: |
           git add .
           git commit -m "Prepare for version patch [skip ci]"
-          npm run patch
-
-      - name: Push changes
-        run: git push
+          git push
 
       - name: npm publish
         run: |
