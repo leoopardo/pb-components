@@ -10,7 +10,6 @@ on:
 
 jobs:
   build:
-    if: "github.event.head_commit.message != 'Prepare for version patch [skip ci]'" # Skip if the commit message indicates it's a version patch
     runs-on: ubuntu-latest
 
     steps:
@@ -37,6 +36,13 @@ jobs:
         run: |
           git config --global user.name "leoopardo"
           git config --global user.email "leo.san9@hotmail.com"
+
+      - name: Check commit message for [skip ci]
+        run: |
+          if git log --format=%B -n 1 HEAD | grep -q "\[skip ci\]"; then
+            echo "Commit message contains [skip ci]. Skipping further steps."
+            exit 78 # Exit code 78 skips the workflow run
+          fi
 
       - name: npm patch
         run: |
