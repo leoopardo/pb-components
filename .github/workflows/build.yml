@@ -2,11 +2,8 @@ name: Build
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      - '**'
-      - '!package.json' # Include all files except package.json
+    paths-ignore:
+      - 'package.json'
 
 jobs:
   build:
@@ -26,7 +23,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-
       - name: Run sd.config.mjs
         run: node sd.config.mjs
 
@@ -38,16 +34,14 @@ jobs:
           git config --global user.name "leoopardo"
           git config --global user.email "leo.san9@hotmail.com"
 
-      - name: Check if commit is from workflow
-        id: check_commit
-        run: echo ::set-output name=is_workflow_commit::$(git log -1 --pretty=%B | grep -c "workflow")
-
-      - name: Commit changes if not from workflow
-        if: steps.check_commit.outputs.is_workflow_commit == '0'
+      - name: npm patch
         run: |
           git add .
-          git commit -m "Prepare for version patch [skip ci]"
-          git push
+          git commit -m "Prepare for version patch"
+          npm run patch
+
+      - name: Push changes
+        run: git push
 
       - name: npm publish
         run: |
