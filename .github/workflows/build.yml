@@ -2,11 +2,15 @@ name: Build
 
 on:
   push:
-    paths-ignore:
-      - '/package.json'
+    branches:
+      - main
+    paths:
+      - '**'
+      - '!package.json' # Include all files except package.json
 
 jobs:
   build:
+    if: "github.event.head_commit.message != 'Prepare for version patch [skip ci]'" # Skip if the commit message indicates it's a version patch
     runs-on: ubuntu-latest
 
     steps:
@@ -45,5 +49,4 @@ jobs:
 
       - name: npm publish
         run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
-          npm run deploy
+          echo "//registry.npmjs.org/:_authToken=${{
