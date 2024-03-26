@@ -39,7 +39,7 @@ jobs:
       - name: npm patch
         run: |
           git add .
-          git commit -m "Prepare for version patch"
+          git commit -m "Prepare for version patch [skip ci]"
           npm run patch
 
       - name: Push changes
