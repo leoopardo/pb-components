@@ -1,7 +1,23 @@
 import { registerTransforms } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 
+// Registro de transformadores personalizados para converter tamanhos em pixels
 registerTransforms(StyleDictionary);
+
+StyleDictionary.registerTransform({
+  name: 'size/px',
+  type: 'value',
+  transitive: true,
+  matcher: function (prop) {
+    return (
+      ['spacing', 'size'].includes(prop.type) && !`${prop.value}`.includes('px')
+    );
+  },
+  transformer: function (prop) {
+    console.log(`${prop.value}`.split(' '));
+    return `${prop.value}`.split(' ').join('px ') + 'px';
+  },
+});
 
 function getStyleDictionaryConfig(theme) {
   return {
@@ -15,18 +31,16 @@ function getStyleDictionaryConfig(theme) {
       `tokens/brand/color/theme/${theme}.json`,
       'tokens/components/*.json',
     ],
+
     platforms: {
-      // css: {
-      //   transformGroup: 'tokens-studio',
-      //   buildPath: `src/styles/`,
-      //   files: [
-      //     {
-      //       destination: `${theme}.css`,
-      //       format: 'css/variables',
-      //     },
-      //   ],
-      // },
       json: {
+        transforms: [
+          'ts/resolveMath',
+          'size/px',
+          'ts/color/modifiers',
+          'ts/border/css/shorthand',
+          'ts/shadow/css/shorthand',
+        ],
         transformGroup: 'tokens-studio',
         buildPath: `src/styles/json/`,
         files: [
@@ -42,9 +56,8 @@ function getStyleDictionaryConfig(theme) {
 
 console.log('Build started...');
 
-// PROCESS THE DESIGN TOKENS FOR THE DIFFEREN BRANDS AND PLATFORMS
-
-['light', 'dark'].forEach(function(theme) {
+// PROCESSAMENTO DOS TOKENS DE DESIGN PARA AS DIFERENTES MARCAS E PLATAFORMAS
+['light', 'dark'].forEach(function (theme) {
   console.log('\n==============================================');
   console.log(`\nProcessing: [${theme}]`);
 

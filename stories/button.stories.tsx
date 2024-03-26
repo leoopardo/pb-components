@@ -20,7 +20,6 @@ const meta: Meta = {
   args: {
     children: 'Button',
     variant: 'filled',
-    style: {width: '150px'},
     icon: <Icon name='ArrowSmallRightIcon' style={{}}/>,
     iconPosition: 'right',
     size: "medium"

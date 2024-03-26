@@ -30,7 +30,13 @@ jobs:
           git config --global user.email "leo.san9@hotmail.com"
 
       - name: npm patch
-        run: npm run patch
+        run: |
+          git add .
+          git commit -m "Prepare for version patch"
+          npm run patch
+
+      - name: Push changes
+        run: git push
 
       - name: npm publish
         run: |

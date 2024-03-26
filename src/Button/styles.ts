@@ -22,7 +22,7 @@ export const ButtonFilled = styled.button<{
           .padding,
   gap:
     size === 'large'
-      ? theme.button.primary.padding.large[`icon-${iconPosition ?? 'off'}`].gap
+      ? 8
       : theme.button.primary.padding.medium[`icon-${iconPosition ?? 'off'}`]
           .gap,
   display: 'flex',
