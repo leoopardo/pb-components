@@ -19,6 +19,7 @@ StyleDictionary.registerTransform({
   },
 });
 
+
 function getStyleDictionaryConfig(theme) {
   return {
     source: [
