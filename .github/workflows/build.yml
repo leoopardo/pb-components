@@ -2,10 +2,8 @@ name: Build
 
 on:
   push:
-    branches:
-      - main
     paths-ignore:
-      - 'package.json'
+      - '/package.json'
 
 jobs:
   build:
@@ -39,17 +37,11 @@ jobs:
       - name: npm patch
         run: |
           git add .
-          git commit -m "Prepare for version patch"
+          git commit -m "Prepare for version patch [skip ci]"
           npm run patch
 
       - name: Push changes
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GH_PAT }}
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_message: "Prepare for version patch"
-          enable_skip_ci: true  # This will add [skip ci] to the commit message
+        run: git push
 
       - name: npm publish
         run: |
