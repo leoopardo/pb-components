@@ -37,13 +37,19 @@ jobs:
           git config --global user.email "leo.san9@hotmail.com"
 
       - name: npm patch
-        run: |
-          git add .
-          git commit -m "Prepare for version patch [skip ci]"
-          npm run patch
+  run: |
+    git add .
+    git commit -m "Prepare for version patch"
+    npm run patch
 
-      - name: Push changes
-        run: git push
+- name: Push changes
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    github_token: ${{ secrets.GH_PAT }}
+    user_name: 'github-actions[bot]'
+    user_email: 'github-actions[bot]@users.noreply.github.com'
+    commit_message: "Prepare for version patch"
+    enable_skip_ci: true  # This will add [skip ci] to the commit message
 
       - name: npm publish
         run: |
