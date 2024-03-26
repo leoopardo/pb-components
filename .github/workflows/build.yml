@@ -14,8 +14,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.GH_PAT }}
+          fetch-depth: 0  # This fetches all commits
 
-      - name: Check for changes in package.json
+       - name: Check for changes in package.json
         run: |
           git diff --quiet HEAD^ HEAD -- package.json && echo "No changes in package.json" || exit 0
 
