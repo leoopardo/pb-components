@@ -22,7 +22,7 @@ const meta: Meta = {
     status: 'default',
     value: 1000,
     total: 100,
-    style: { width: '180px' },
+    currency: true,
   },
   decorators: [
     (Story) => (

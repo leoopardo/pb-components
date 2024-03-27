@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes } from 'react';
+import React, { FC, HTMLAttributes, ReactChild } from 'react';
 import { Icon } from '../Icon';
 import { ProvideTheme } from '../ProvideTheme';
 import { moneyFormatter } from '../utils/moneyFormatter';
@@ -19,6 +19,8 @@ export interface BigNumberProps extends HTMLAttributes<HTMLDivElement> {
   value?: number;
   total?: number;
   style?: React.CSSProperties;
+  currency?: boolean;
+  icon?: ReactChild
 }
 
 export const BigNumber: FC<BigNumberProps> = ({
@@ -27,17 +29,31 @@ export const BigNumber: FC<BigNumberProps> = ({
   total,
   status,
   style,
+  currency,
+  icon
 }) => {
   return (
     <ProvideTheme>
       <StyledCard style={style}>
         <BgIcon status={status || 'default'}>
-          <Icon name="CurrencyDollarIcon" />
+        {icon ??  <Icon name="ChevronRightIcon" />}
         </BgIcon>
         <TextContent>
           <BigNumberLabel>{label}</BigNumberLabel>
-          <BigNumberValue>{moneyFormatter(value || 0)}</BigNumberValue>
-          <BigNumberTotal>Total: {numberFormatter(total || 0)}</BigNumberTotal>
+          {value && currency ? (
+            <BigNumberValue>{moneyFormatter(value || 0)}</BigNumberValue>
+          ) : value && !currency ? (
+            <BigNumberValue>{numberFormatter(value || 0)}</BigNumberValue>
+          ) : (
+            <></>
+          )}
+          {total ? (
+            <BigNumberTotal>
+              Total: {numberFormatter(total || 0)}
+            </BigNumberTotal>
+          ) : (
+            <></>
+          )}
         </TextContent>
       </StyledCard>
     </ProvideTheme>
