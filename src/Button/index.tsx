@@ -38,6 +38,7 @@ export interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
     icon?: ReactChild;
     iconPosition?: 'left' | 'right';
   }[];
+  theme?: 'light' | 'dark';
 }
 
 export const Button: FC<ButtonProps> = ({

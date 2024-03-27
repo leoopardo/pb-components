@@ -10,6 +10,7 @@ export interface TextProps extends HTMLAttributes<HTMLDivElement> {
   style?: CSSProperties;
   className?: string;
   inherit?: boolean;
+  theme?: 'light' | 'dark';
 }
 
 export const Text: FC<TextProps> = ({
@@ -18,11 +19,17 @@ export const Text: FC<TextProps> = ({
   level,
   weight,
   style,
-  inherit
+  inherit,
 }) => {
   return (
     <ProvideTheme>
-      <Typography variant={variant} level={level} weight={weight} style={{...style}} inherit={inherit}>
+      <Typography
+        variant={variant}
+        level={level}
+        weight={weight}
+        style={{ ...style }}
+        inherit={inherit}
+      >
         {children}
       </Typography>
     </ProvideTheme>

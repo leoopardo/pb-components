@@ -302,6 +302,7 @@ export interface IconProps extends HTMLAttributes<HTMLDivElement> {
   style?: CSSProperties;
   size?: 'small' | 'medium' | 'large';
   className?: string;
+  theme?: 'light' | 'dark';
 }
 
 export const Icon: FC<IconProps> = ({

@@ -41,6 +41,7 @@ function getStyleDictionaryConfig(theme) {
           'ts/color/modifiers',
           'ts/border/css/shorthand',
           'ts/shadow/css/shorthand',
+          'ts/typography/css/shorthand',
         ],
         transformGroup: 'tokens-studio',
         buildPath: `src/styles/json/`,

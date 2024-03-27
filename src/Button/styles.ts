@@ -44,7 +44,7 @@ export const ButtonFilled = styled.button<{
       disabled || loading
         ? theme.button.primary.filled.label.disabled
         : theme.button.primary.filled.label.hover,
-    cursor: disabled || loading ? 'no-drop' : 'pointer',
+    cursor: loading ? 'progress' : disabled ? 'no-drop' : 'pointer',
   },
   '&:active': {
     backgroundColor:
@@ -54,7 +54,7 @@ export const ButtonFilled = styled.button<{
     color:
       disabled || loading
         ? theme.button.primary.filled.label.disabled
-        : theme.button.primary.filled.label.active,
+        : theme.button.primary.filled.label.active,cursor: "grabbing"
   },
   '&:focus': {
     outline: !disabled && !loading && theme.button.border.primary.filled.focus,
@@ -111,7 +111,7 @@ export const ButtonOutlined = styled.button<{
     color: disabled
       ? theme.button.primary.outline.label.disabled
       : theme.button.primary.outline.label.hover,
-    cursor: disabled || loading ? 'no-drop' : 'pointer',
+    cursor: loading ? 'progress' : disabled ? 'no-drop' : 'pointer',
   },
   '&:active': {
     backgroundColor:
@@ -121,7 +121,7 @@ export const ButtonOutlined = styled.button<{
     color:
       disabled || loading
         ? theme.button.primary.outline.label.disabled
-        : theme.button.primary.outline.label.active,
+        : theme.button.primary.outline.label.active,cursor: "grabbing"
   },
   '&:focus': {
     outline: !disabled && !loading && theme.button.border.primary.outline.focus,
@@ -176,7 +176,7 @@ export const ButtonSecondary = styled.button<{
     color: disabled
       ? theme.button.secondary.filled.label.disabled
       : theme.button.secondary.filled.label.hover,
-    cursor: disabled || loading ? 'no-drop' : 'pointer',
+    cursor: loading ? 'progress' : disabled ? 'no-drop' : 'pointer',
   },
   '&:active': {
     backgroundColor:
@@ -187,6 +187,7 @@ export const ButtonSecondary = styled.button<{
       disabled || loading
         ? theme.button.secondary.filled.label.disabled
         : theme.button.secondary.filled.label.active,
+        cursor: "grabbing"
   },
   '&:focus': {
     outline: !disabled && !loading && theme.button.border.secondary.focus,
@@ -206,7 +207,9 @@ export const SeccondaryCollapsedButtonList = styled.ul<{ collapsed: boolean }>(
     padding: 0,
     zIndex: 9999,
     animationName: collapsed ? 'collapse' : 'uncollapse',
-    animationDuration: collapsed ? theme.animation.duration["500"] : theme.animation.duration["100"],
+    animationDuration: collapsed
+      ? theme.animation.duration['500']
+      : theme.animation.duration['100'],
     animationFillMode: 'forwards',
     animationTimingFunction: 'ease-in-out',
     width: '100%',
@@ -215,13 +218,23 @@ export const SeccondaryCollapsedButtonList = styled.ul<{ collapsed: boolean }>(
     borderRadius: theme.button['border-radius'],
 
     '@keyframes uncollapse': {
-      from: { maxHeight: '100%', opacity: theme.opacity["100"] },
-      to: { maxHeight: 0, opacity: theme.opacity["transparent"], overflow: 'hidden', display: 'none' },
+      from: { maxHeight: '100%', opacity: theme.opacity['100'] },
+      to: {
+        maxHeight: 0,
+        opacity: theme.opacity['transparent'],
+        overflow: 'hidden',
+        display: 'none',
+      },
     },
 
     '@keyframes collapse': {
-      from: { maxHeight: 0, opacity: theme.opacity["transparent"], overflow: 'hidden', display: 'none' },
-      to: { maxHeight: 300, opacity: theme.opacity["100"] },
+      from: {
+        maxHeight: 0,
+        opacity: theme.opacity['transparent'],
+        overflow: 'hidden',
+        display: 'none',
+      },
+      to: { maxHeight: 300, opacity: theme.opacity['100'] },
     },
   })
 );
@@ -266,7 +279,7 @@ export const SeccondaryCollapsedButtonItem = styled.li<{
     color: disabled
       ? theme.button.secondary.filled.label.disabled
       : theme.button.secondary.filled.label.hover,
-    cursor: disabled || loading ? 'no-drop' : 'pointer',
+    cursor: loading ? 'progress' : disabled ? 'no-drop' : 'pointer',
   },
   '&:active': {
     backgroundColor:

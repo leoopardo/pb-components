@@ -1,14 +1,14 @@
 import React, { createContext, useContext, FC } from 'react';
 // Defina a forma do seu tema
 export interface Theme {
-  theme: 'light' | 'dark';
+  theme?: 'light' | 'dark';
 }
 
 // Defina o contexto do tema
 const ThemeContext = createContext<Theme | undefined>(undefined);
 
 // Componente de provedor de tema
-export const ThemeProvider: FC<{ theme: Theme; children: React.ReactNode }> = ({
+export const ThemeProvider: FC<{ theme?: Theme; children: React.ReactNode }> = ({
   theme,
   children,
 }) => {

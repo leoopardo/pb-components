@@ -23,7 +23,7 @@ const meta: Meta = {
   },
   decorators: [
     Story => (
-      <ThemeProvider theme={{theme: "light"}}>
+      <ThemeProvider theme={{theme: Story().props.theme}}>
           {Story()}
       </ThemeProvider>
     ),

@@ -1,28 +1,22 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
-import { Props, BigNumber } from '../src/BigNumber';
+import { Avatar, AvatarProps } from '../src/Avatar';
 import { ThemeProvider } from '../src/ThemeProvider';
 
 const meta: Meta = {
-  title: 'Components/BigNumber',
-  component: BigNumber,
+  title: 'Components/Avatar',
+  component: Avatar,
   argTypes: {
-    children: {
-      control: {
-        type: 'text',
-      },
-    },
+    size: { defaultValue: 'md' },
   },
   parameters: {
     controls: { expanded: true },
   },
   args: {
-    label: 'Label',
-    theme: 'light',
-    status: 'default',
-    value: 1000,
-    total: 100,
-    style: { width: '180px' },
+    children: 'Pay Brokers',
+    size: 'md',
+    shape: 'square',
+    src: 'https://api.dicebear.com/7.x/miniavs/svg?seed=1',
   },
   decorators: [
     (Story) => (
@@ -35,7 +29,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: StoryFn<Props> = (args) => <BigNumber {...args} />;
+const Template: StoryFn<AvatarProps> = (args) => <Avatar {...args} />;
 
 // By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
 // https://storybook.js.org/docs/react/workflows/unit-testing

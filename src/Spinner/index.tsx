@@ -5,6 +5,7 @@ import { SpinnerComponent } from './styles';
 export interface SpinnerProps extends HTMLAttributes<HTMLDivElement> {
   style?: CSSProperties;
   size?: 'small' | 'medium' | 'large';
+  theme?: 'light' | 'dark';
 }
 
 export const Spinner: FC<SpinnerProps> = ({ style, size }) => {
