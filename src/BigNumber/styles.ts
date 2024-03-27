@@ -10,7 +10,7 @@ export const StyledCard = styled.div(({ theme }) => ({
   borderRadius: theme.bignumber.borderRadius.content,
   border: theme.bignumber.border.default,
   color: theme.bignumber.fg.value,
-  overflow: 'hidden',
+  width: 'fit-content',
 }));
 
 export const BgIcon = styled.div<{
@@ -34,24 +34,35 @@ export const TextContent = styled.div(({ theme }) => ({
   gap: theme.bignumber.gap.value,
 }));
 
-export const BigNumberLabel = styled.div(({ theme }) => ({
+export const BigNumberLabel = styled.p(({ theme }) => ({
   color: theme.bignumber.fg.value,
   font: theme.bignumber.total.value,
   width: '100%',
   textTransform: 'capitalize',
+  margin: 0,
+  wordBreak: 'break-all',
+  hyphens: 'auto',
 }));
 
-export const BigNumberValue = styled.div(({ theme }) => ({
+export const BigNumberValue = styled.p(({ theme }) => ({
   color: theme.bignumber.fg.value,
   font: theme.bignumber.text.value,
   width: '100%',
+  margin: 0,
+  wordBreak: 'break-all',
+  hyphens: 'auto',
 }));
 
-export const BigNumberTotal = styled.div(({ theme }) => ({
+export const BigNumberTotal = styled.p(({ theme }) => ({
   padding: theme.bignumber.padding.total,
   gap: theme.bignumber.gap.total,
   color: theme.bignumber.bg.total.text,
   borderRadius: theme.bignumber.borderRadius.icon,
   border: theme.bignumber.border.total.default,
   font: theme.bignumber.total.value,
+  margin: 0,
+  paddingTop: 2,
+  paddingBottom: 2,
+  wordBreak: 'break-all',
+  hyphens: 'auto',
 }));

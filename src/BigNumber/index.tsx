@@ -1,7 +1,6 @@
 import React, { FC, HTMLAttributes } from 'react';
 import { Icon } from '../Icon';
 import { ProvideTheme } from '../ProvideTheme';
-import { useTheme } from '../ThemeProvider';
 import { moneyFormatter } from '../utils/moneyFormatter';
 import { numberFormatter } from '../utils/numberFormatter';
 import {
@@ -13,7 +12,7 @@ import {
   TextContent,
 } from './styles';
 
-export interface Props extends HTMLAttributes<HTMLDivElement> {
+export interface BigNumberProps extends HTMLAttributes<HTMLDivElement> {
   theme?: 'light' | 'dark';
   label?: string;
   status?: 'danger' | 'warning' | 'neutral' | 'default' | 'success';
@@ -22,17 +21,16 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
   style?: React.CSSProperties;
 }
 
-export const BigNumber: FC<Props> = ({
+export const BigNumber: FC<BigNumberProps> = ({
   label,
   value,
   total,
   status,
   style,
 }) => {
-  const { theme } = useTheme();
   return (
     <ProvideTheme>
-      <StyledCard provided-theme={theme} style={style}>
+      <StyledCard style={style}>
         <BgIcon status={status || 'default'}>
           <Icon name="CurrencyDollarIcon" />
         </BgIcon>
